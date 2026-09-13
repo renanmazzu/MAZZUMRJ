@@ -1,0 +1,93 @@
+/* ==========================================================
+   WEIGHT CARD
+========================================================== */
+
+.mr-weight-card{
+
+    display:flex;
+
+    flex-direction:column;
+
+}
+
+.mr-weight-value{
+
+    margin-top:22px;
+
+    font-size:3.8rem;
+
+    font-weight:900;
+
+    line-height:1;
+
+    color:#FFFFFF;
+
+    letter-spacing:-3px;
+
+}
+
+.mr-weight-value span{
+
+    font-size:1.4rem;
+
+    color:#AEB8C4;
+
+    margin-left:6px;
+
+}
+
+.mr-weight-subtitle{
+
+    margin-top:10px;
+
+    color:#9AA5B2;
+
+    font-size:.92rem;
+
+}
+
+.mr-weight-divider{
+
+    width:100%;
+
+    height:1px;
+
+    margin:22px 0;
+
+    background:rgba(255,255,255,.06);
+
+}
+
+.mr-weight-goal{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+}
+
+.mr-weight-goal span{
+
+    color:#9AA5B2;
+
+}
+
+.mr-weight-goal strong{
+
+    color:white;
+
+}
+
+.mr-weight-progress{
+
+    margin-top:18px;
+
+    text-align:center;
+
+    color:#9EF01A;
+
+    font-weight:700;
+
+}

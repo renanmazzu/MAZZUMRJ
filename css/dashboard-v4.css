@@ -1,0 +1,818 @@
+/* ==========================================================
+   MAZZUPRO
+   DASHBOARD V4
+   Mission Control UI
+   Version 4.0
+========================================================== */
+
+
+
+/* ==========================================================
+   DESIGN TOKENS
+========================================================== */
+
+:root{
+
+    /* COLORS */
+
+    --mz-bg:#0D1117;
+
+    --mz-surface:#161B22;
+
+    --mz-surface-light:#1C222B;
+
+    --mz-primary:#9DFF00;
+
+    --mz-primary-dark:#74CC00;
+
+    --mz-accent:#00D4FF;
+
+    --mz-text:#FFFFFF;
+
+    --mz-text-soft:rgba(255,255,255,.72);
+
+    --mz-text-fade:rgba(255,255,255,.45);
+
+    --mz-border:rgba(255,255,255,.08);
+
+
+
+    /* SPACING */
+
+    --mz-space-1:4px;
+
+    --mz-space-2:8px;
+
+    --mz-space-3:12px;
+
+    --mz-space-4:16px;
+
+    --mz-space-5:24px;
+
+    --mz-space-6:32px;
+
+    --mz-space-7:48px;
+
+
+
+    /* RADIUS */
+
+    --mz-radius-sm:12px;
+
+    --mz-radius-md:18px;
+
+    --mz-radius-lg:28px;
+
+    --mz-radius-xl:34px;
+
+
+
+    /* SHADOWS */
+
+    --mz-shadow-card:
+
+        0 18px 45px rgba(0,0,0,.38);
+
+    --mz-shadow-hero:
+
+        0 30px 80px rgba(0,0,0,.55);
+
+    --mz-shadow-glow:
+
+        0 0 24px rgba(157,255,0,.16);
+
+
+
+    /* TRANSITIONS */
+
+    --mz-transition:
+
+        .28s ease;
+
+}
+/* ==========================================================
+   RESET
+========================================================== */
+
+*{
+
+    box-sizing:border-box;
+
+}
+
+img{
+
+    display:block;
+
+    max-width:100%;
+
+}
+
+button{
+
+    font-family:inherit;
+
+}
+
+a{
+
+    text-decoration:none;
+
+}
+
+body{
+
+    background:var(--mz-bg);
+
+    color:var(--mz-text);
+
+}
+/* ==========================================================
+   TYPOGRAPHY
+========================================================== */
+
+.mz-hero{
+
+    font-size:72px;
+
+    font-weight:900;
+
+    line-height:.92;
+
+}
+
+.mz-title{
+
+    font-size:24px;
+
+    font-weight:800;
+
+}
+
+.mz-subtitle{
+
+    font-size:18px;
+
+    font-weight:700;
+
+}
+
+.mz-text{
+
+    font-size:14px;
+
+    line-height:1.5;
+
+}
+
+.mz-caption{
+
+    font-size:11px;
+
+    letter-spacing:1px;
+
+    text-transform:uppercase;
+
+    color:var(--mz-text-soft);
+
+}
+/* ==========================================================
+   PANEL FOUNDATION
+========================================================== */
+
+.mz-panel{
+
+    position:relative;
+
+    overflow:hidden;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:space-between;
+
+    width:100%;
+
+    border-radius:28px;
+
+    padding:22px;
+
+    background:var(--mz-surface);
+
+    border:1px solid var(--mz-border);
+
+    box-shadow:var(--mz-shadow-card);
+
+    transition:
+
+        transform .30s,
+
+        box-shadow .30s,
+
+        border-color .30s;
+
+}
+
+.mz-panel:hover{
+
+    transform:translateY(-3px);
+
+    border-color:rgba(157,255,0,.18);
+
+    box-shadow:
+
+        var(--mz-shadow-card),
+
+        var(--mz-shadow-glow);
+
+}
+/* ==========================================================
+   PANEL HEADER
+========================================================== */
+
+.mz-panel-header{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:16px;
+
+    margin-bottom:20px;
+
+}
+
+.mz-panel-icon{
+
+    width:52px;
+
+    height:52px;
+
+    border-radius:16px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    font-size:24px;
+
+    background:
+
+        rgba(157,255,0,.10);
+
+    border:
+
+        1px solid rgba(157,255,0,.15);
+
+    backdrop-filter:blur(8px);
+
+}
+
+.mz-panel-heading{
+
+    display:flex;
+
+    flex-direction:column;
+
+}
+
+.mz-panel-heading small{
+
+    font-size:11px;
+
+    letter-spacing:1.5px;
+
+    color:var(--mz-text-soft);
+
+}
+
+.mz-panel-heading h3{
+
+    margin:4px 0 0;
+
+    font-size:24px;
+
+    font-weight:800;
+
+}
+/* ==========================================================
+   PANEL BODY
+========================================================== */
+
+.mz-panel-body{
+
+    flex:1;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:flex-start;
+
+    gap:18px;
+
+}
+
+.mz-panel-footer{
+
+    margin-top:22px;
+
+}
+/* ==========================================================
+   METRICS
+========================================================== */
+
+.mz-metric{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:4px;
+
+}
+
+.mz-metric-value{
+
+    font-size:42px;
+
+    font-weight:900;
+
+    line-height:1;
+
+    color:var(--mz-text);
+
+}
+
+.mz-metric-label{
+
+    font-size:11px;
+
+    letter-spacing:1.2px;
+
+    text-transform:uppercase;
+
+    color:var(--mz-text-soft);
+
+}
+/* ==========================================================
+   DIVIDER
+========================================================== */
+
+.mz-divider{
+
+    width:100%;
+
+    height:1px;
+
+    background:
+
+        linear-gradient(
+
+            90deg,
+
+            transparent,
+
+            rgba(255,255,255,.10),
+
+            transparent
+
+        );
+
+}
+/* ==========================================================
+   BUTTON
+========================================================== */
+
+.mz-button{
+
+    width:100%;
+
+    height:52px;
+
+    border:none;
+
+    border-radius:16px;
+
+    background:var(--mz-primary);
+
+    color:#101010;
+
+    font-size:14px;
+
+    font-weight:800;
+
+    cursor:pointer;
+
+    transition:.28s;
+
+}
+
+.mz-button:hover{
+
+    transform:translateY(-2px);
+
+    filter:brightness(1.05);
+
+}
+
+.mz-button:active{
+
+    transform:scale(.98);
+
+}
+
+.mz-button:disabled{
+
+    background:#355A1B;
+
+    color:#FFF;
+
+    cursor:default;
+
+}
+/* ==========================================================
+   PROGRESS
+========================================================== */
+
+.mz-progress{
+
+    width:100%;
+
+    height:14px;
+
+    border-radius:999px;
+
+    overflow:hidden;
+
+    background:
+
+        rgba(255,255,255,.08);
+
+}
+
+.mz-progress-fill{
+
+    height:100%;
+
+    border-radius:999px;
+
+    background:
+
+        linear-gradient(
+
+            90deg,
+
+            #7FFF00,
+
+            #B8FF39
+
+        );
+
+    transition:width .8s ease;
+
+}
+/* ==========================================================
+   HERO
+========================================================== */
+
+.mz-hero{
+
+    position:relative;
+
+    overflow:hidden;
+
+    min-height:430px;
+
+    padding:30px;
+
+    border-radius:34px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:space-between;
+
+    background-size:cover;
+
+    background-position:center;
+
+    background-repeat:no-repeat;
+
+    border:1px solid rgba(255,255,255,.08);
+
+    box-shadow:var(--mz-shadow-hero);
+
+}
+/* ==========================================================
+   HERO OVERLAY
+========================================================== */
+
+.mz-hero::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+
+    linear-gradient(
+
+        180deg,
+
+        rgba(0,0,0,.18),
+
+        rgba(0,0,0,.82)
+
+    ),
+
+    linear-gradient(
+
+        90deg,
+
+        rgba(0,0,0,.35),
+
+        rgba(0,0,0,.05)
+
+    );
+
+}
+.mz-hero-content{
+
+    position:relative;
+
+    z-index:2;
+
+    max-width:90%;
+
+}
+.mz-hero-tag{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:8px;
+
+    padding:8px 18px;
+
+    border-radius:999px;
+
+    background:rgba(157,255,0,.14);
+
+    border:1px solid rgba(157,255,0,.20);
+
+    color:var(--mz-primary);
+
+    font-size:12px;
+
+    font-weight:700;
+
+    letter-spacing:1px;
+
+}
+.mz-hero-title{
+
+    margin-top:18px;
+
+    font-size:68px;
+
+    font-weight:900;
+
+    line-height:.9;
+
+    letter-spacing:-2px;
+
+    color:var(--mz-primary);
+
+    text-shadow:
+
+        0 0 20px rgba(157,255,0,.25);
+
+}
+.mz-hero-subtitle{
+
+    margin-top:10px;
+
+    font-size:38px;
+
+    font-weight:800;
+
+    color:#FFF;
+
+}
+.mz-hero-description{
+
+    margin-top:12px;
+
+    max-width:480px;
+
+    font-size:15px;
+
+    line-height:1.6;
+
+    color:var(--mz-text-soft);
+
+}
+.mz-hero::after{
+
+    content:"";
+
+    position:absolute;
+
+    right:-90px;
+
+    bottom:-90px;
+
+    width:280px;
+
+    height:280px;
+
+    border-radius:50%;
+
+    background:
+
+    radial-gradient(
+
+        circle,
+
+        rgba(157,255,0,.18),
+
+        transparent 70%
+
+    );
+
+    filter:blur(16px);
+
+}
+/* ==========================================================
+   TODAY MISSION PANEL
+========================================================== */
+
+.mz-today-panel{
+
+    min-height:340px;
+
+    background-image:
+
+        linear-gradient(
+
+            rgba(12,18,24,.82),
+
+            rgba(12,18,24,.95)
+
+        ),
+
+        url("../assets/images/workout-bg.jpg");
+
+    background-size:cover;
+
+    background-position:center;
+
+}
+.mz-day{
+
+    color:var(--mz-text-soft);
+
+    font-size:15px;
+
+}
+.mz-metrics{
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:22px;
+
+}
+.mz-metric-value{
+
+    font-size:32px;
+
+}
+/* ==========================================================
+   MISSION CONTROL GRID
+========================================================== */
+
+.mz-dashboard{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:24px;
+
+    width:100%;
+
+}
+
+.mz-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,minmax(0,1fr));
+
+    gap:24px;
+
+}
+
+.mz-grid > *{
+
+    min-width:0;
+
+}
+/* ==========================================================
+   RESPONSIVE
+========================================================== */
+
+@media(max-width:900px){
+
+    .mz-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+}
+/* ==========================================================
+   GLASS EFFECT
+========================================================== */
+
+.mz-glass{
+
+    backdrop-filter:blur(14px);
+
+    background:
+
+        rgba(22,27,34,.72);
+
+    border:
+
+        1px solid rgba(255,255,255,.08);
+
+}
+/* ==========================================================
+   BADGE
+========================================================== */
+
+.mz-badge{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:8px;
+
+    padding:8px 16px;
+
+    border-radius:999px;
+
+    background:
+
+        rgba(157,255,0,.12);
+
+    color:var(--mz-primary);
+
+    font-size:12px;
+
+    font-weight:700;
+
+    letter-spacing:1px;
+
+}
+/* ==========================================================
+   FADE IN
+========================================================== */
+
+@keyframes mzFade{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(14px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:none;
+
+    }
+
+}
+
+.mz-fade{
+
+    animation:mzFade .45s ease;
+
+}

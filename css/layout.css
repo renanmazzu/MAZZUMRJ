@@ -1,0 +1,149 @@
+body {
+    width: 100%;
+    min-width: 100%;
+    margin: 0;
+    padding: 0;
+
+    background: var(--bg);
+    color: var(--text);
+
+    font-family: Inter, Arial, sans-serif;
+
+    overflow-x: hidden;
+}
+
+#app {
+    width: 100%;
+    min-width: 100%;
+    max-width: none;
+
+    min-height: 100vh;
+
+    margin: 0;
+    padding: 0;
+
+    background: var(--bg);
+
+    position: relative;
+
+    overflow-x: hidden;
+}
+.dashboard{
+
+    padding:10px;
+
+    padding-bottom:95px;
+
+}
+.hero{
+
+    position:relative;
+
+    height:270px;
+
+    border-radius:28px;
+
+    overflow:hidden;
+
+    background:
+
+    linear-gradient(
+
+        rgba(0,0,0,.35),
+
+        rgba(0,0,0,.70)
+
+    ),
+
+    url("../assets/images/hero.webp");
+
+    background-size:cover;
+
+    background-position:center;
+
+    box-shadow:var(--shadow);
+
+}
+.hero-overlay{
+
+    position:absolute;
+
+    inset:0;
+
+    padding:24px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:flex-end;
+
+}
+.hero h1{
+
+    margin:0;
+
+    font-size:40px;
+
+    font-weight:800;
+
+    color:white;
+
+}
+.hero-subtitle{
+
+    color:var(--green);
+
+    font-size:13px;
+
+    letter-spacing:3px;
+
+    font-weight:700;
+
+}
+.progress{
+
+    height:10px;
+
+    margin-top:20px;
+
+    border-radius:999px;
+
+    overflow:hidden;
+
+    background:rgba(255,255,255,.10);
+
+}
+
+.progress-fill{
+
+    height:100%;
+
+    border-radius:999px;
+
+    background:linear-gradient(
+
+        90deg,
+
+        var(--green),
+
+        #6CFF8E
+
+    );
+
+    box-shadow:var(--green-glow);
+
+}
+.hero-footer{
+
+    margin-top:10px;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    color:white;
+
+    font-weight:600;
+
+}

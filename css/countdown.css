@@ -1,0 +1,135 @@
+/* ==========================================================
+   COUNTDOWN CARD
+========================================================== */
+
+.mr-countdown-card{
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    text-align:center;
+
+    justify-content:space-between;
+
+}
+
+.mr-countdown-header{
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    gap:10px;
+
+}
+
+.mr-countdown-header small{
+
+    color:#9AA5B2;
+
+    font-size:.78rem;
+
+    font-weight:700;
+
+    letter-spacing:3px;
+
+    text-transform:uppercase;
+
+}
+
+.mr-countdown-days{
+
+    margin-top:26px;
+
+    font-size:4rem;
+
+    font-weight:900;
+
+    line-height:1;
+
+    letter-spacing:-4px;
+
+    color:#FFFFFF;
+
+}
+
+.mr-countdown-label{
+
+    margin-top:10px;
+
+    color:#9EF01A;
+
+    font-size:.9rem;
+
+    font-weight:800;
+
+    letter-spacing:4px;
+
+}
+
+.mr-countdown-line{
+
+    width:70%;
+
+    height:1px;
+
+    margin:22px 0;
+
+    background:rgba(255,255,255,.06);
+
+}
+
+.mr-countdown-weeks{
+
+    font-size:2.2rem;
+
+    font-weight:800;
+
+    color:white;
+
+}
+
+.mr-countdown-weeks-label{
+
+    margin-top:6px;
+
+    color:#A8B3BE;
+
+    letter-spacing:3px;
+
+    font-size:.82rem;
+
+}
+
+.mr-countdown-date{
+
+    font-size:1.1rem;
+
+    font-weight:700;
+
+    color:white;
+
+}
+
+.mr-countdown-message{
+
+    margin-top:24px;
+
+    padding-top:18px;
+
+    width:100%;
+
+    border-top:1px solid rgba(255,255,255,.06);
+
+    color:#9EF01A;
+
+    font-style:italic;
+
+    font-size:.92rem;
+
+}

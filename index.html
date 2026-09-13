@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>MISSÃO RIO 2:59</title>
+
+    <meta name="theme-color" content="#0B84FF">
+
+    <link rel="manifest" href="manifest.json">
+<link rel="stylesheet" href="css/goal-hero.css">
+<link rel="stylesheet" href="css/dashboard-v3.css?v=3">
+<link rel="stylesheet" href="css/dashboard/HeroCard.css">
+
+<link rel="stylesheet" href="css/dashboard/WorkoutCard.css">
+
+<!-- WeeklyCard.css removido: o Weekly Card atual usa o CSS do Dashboard V3 -->
+
+<link rel="stylesheet" href="css/dashboard/FitnessCard.css">
+
+
+<link rel="stylesheet" href="css/dashboard/Navbar.css">
+<!-- <link rel="stylesheet" href="css/dashboard-v2.css"> -->
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/typography.css">
+    <link rel="stylesheet" href="css/layout.css?v=3">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/hero.css">
+    <link rel="stylesheet" href="css/countdown.css">
+
+    <link rel="stylesheet" href="css/goal.css">
+    <link rel="stylesheet" href="css/status.css">
+    <!-- <link rel="stylesheet" href="css/cards.css"> -->
+    <!-- <link rel="stylesheet" href="css/dashboard.css"> -->
+    <link rel="stylesheet" href="css/pages.css">
+    <link rel="stylesheet" href="css/app.css?v=3">
+    <link rel="stylesheet" href="css/running.css">
+    <link rel="stylesheet" href="css/musculacao.css">
+
+</head>
+
+<body>
+
+<div id="app">
+
+    <header id="header"></header>
+
+    <main id="page"></main>
+
+    <nav id="navbar"></nav>
+
+</div>
+<script>
+window.addEventListener("error", function (event) {
+    document.body.innerHTML = `
+        <div style="
+            color:#fff;
+            background:#0D1117;
+            padding:20px;
+            font-family:Arial;
+            min-height:100vh;
+        ">
+            <h2 style="color:#9DFF00;">ERRO MAZZUPRO</h2>
+            <pre style="
+                white-space:pre-wrap;
+                color:#fff;
+                font-size:14px;
+            ">${event.message}
+
+Arquivo: ${event.filename}
+Linha: ${event.lineno}
+Coluna: ${event.colno}</pre>
+        </div>
+    `;
+});
+</script>
+<script src="js/database/AppDatabase.js"></script>
+<script src="js/setup/SeedService.js?v=2"></script>
+<script src="js/helpers.js"></script>
+<script src="js/helpers/DateHelper.js"></script>
+<script src="js/storage.js"></script>
+<script src="js/services/WorkoutService.js"></script>
+<script src="js/services/StrengthService.js"></script>
+<script src="js/services/ExportService.js"></script>
+<script src="js/services/MissionService.js"></script>
+<script src="js/services/MissionProgressService.js"></script>
+<script src="js/mission.js"></script>
+<script src="js/training.js"></script>
+<script src="js/athlete.js"></script>
+<script src="js/components/Header.js"></script>
+<script src="js/components/Navbar.js"></script>
+<script src="js/components/running/TodayRunCard.js"></script>
+<script src="js/components/running/RunLogCard.js"></script>
+<script src="js/components/running/WeeklyRunningCard.js"></script>
+<script src="js/components/ExportDataCard.js"></script>
+<script src="js/components/WeeklyRunningPlanner.js"></script>
+<script src="js/components/running/NextRunCard.js"></script>
+<script src="js/components/running/WeeklyGoalCard.js"></script>
+<script src="js/viewmodels/DashboardViewModel.js"></script>
+<script src="js/viewmodels/RunningViewModel.js"></script>
+<script src="js/dashboard/HeroCardV3.js"></script>
+<script src="js/dashboard/WorkoutCardV3.js"></script>
+<script src="js/dashboard/WeeklyCardV3.js"></script>
+<script src="js/dashboard/LastWorkoutCardV3.js"></script>
+<script src="js/dashboard/TodayTrainingCard.js"></script>
+<script src="js/pages/DashboardPage.js"></script>
+<script src="js/pages/CorridaPage.js"></script>
+<script src="js/pages/TreinoPage.js"></script>
+<script src="js/pages/MusculacaoPage.js"></script>
+<script src="js/pages/PlanejamentoPage.js"></script>
+<script src="js/pages/EvolucaoPage.js"></script>
+<script src="js/router.js"></script>
+<script src="assets/icons/lucide/lucide.min.js"></script>
+<script src="js/app.js"></script>
+<script>
+
+if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('./sw.js');
+}
+
+</script>
+
+<script>
+
+</script>
+</script>
+
+</body>
+
+</html>

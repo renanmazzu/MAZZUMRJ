@@ -1,0 +1,59 @@
+/* ==========================================================
+   STATUS CARD
+========================================================== */
+
+.mr-status-card{
+
+    display:flex;
+
+    flex-direction:column;
+
+}
+
+.mr-status-title{
+
+    margin-top:22px;
+
+    color:#AEB8C4;
+
+    font-size:.95rem;
+
+}
+
+.mr-status-value{
+
+    margin-top:8px;
+
+    font-size:2.4rem;
+
+    font-weight:800;
+
+    color:#9EF01A;
+
+    line-height:1.1;
+
+}
+
+.mr-status-divider{
+
+    width:100%;
+
+    height:1px;
+
+    margin:22px 0;
+
+    background:rgba(255,255,255,.06);
+
+}
+
+.mr-status-message{
+
+    color:#D5DCE3;
+
+    line-height:1.5;
+
+    font-size:.95rem;
+
+    margin-top:auto;
+
+}

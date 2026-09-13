@@ -1,0 +1,782 @@
+.mr-running-page{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:24px;
+
+    padding-bottom:120px;
+
+}
+/*======================================================
+TODAY RUN CARD
+======================================================*/
+
+.mr-run-card{
+
+    background:#1B1F28;
+
+    border-radius:28px;
+
+    padding:26px;
+
+    border:1px solid rgba(255,255,255,.08);
+
+    box-shadow:0 20px 40px rgba(0,0,0,.35);
+
+}
+
+.mr-run-badge{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:8px;
+
+    padding:8px 16px;
+
+    border-radius:999px;
+
+    background:rgba(157,255,0,.10);
+
+    color:#9DFF00;
+
+    font-size:12px;
+
+    font-weight:700;
+
+    letter-spacing:1px;
+
+}
+
+.mr-run-card h1{
+
+    margin:18px 0 6px;
+
+    font-size:34px;
+
+    line-height:1.1;
+
+    color:#FFF;
+
+}
+
+.mr-run-date{
+
+    color:rgba(255,255,255,.70);
+
+    margin-bottom:26px;
+
+}
+
+.mr-run-stats{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:18px;
+
+    margin-bottom:28px;
+
+}
+
+.mr-run-stats span{
+
+    display:block;
+
+    font-size:11px;
+
+    color:rgba(255,255,255,.55);
+
+    margin-bottom:4px;
+
+}
+
+.mr-run-stats strong{
+
+    font-size:22px;
+
+    color:#FFF;
+
+}
+
+
+.mr-run-empty{
+
+    color:rgba(255,255,255,.70);
+
+}
+/*======================================================
+NEXT RUN CARD
+======================================================*/
+
+.mr-next-run-card{
+
+    background:#1B1F28;
+
+    border-radius:24px;
+
+    padding:24px;
+
+    border:1px solid rgba(255,255,255,.08);
+
+}
+
+.mr-next-run-header{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:16px;
+
+    margin-bottom:20px;
+
+}
+
+.mr-next-run-header span{
+
+    font-size:30px;
+
+}
+
+.mr-next-run-header small{
+
+    color:#9DFF00;
+
+    font-size:12px;
+
+    letter-spacing:1px;
+
+}
+
+.mr-next-run-header h2{
+
+    margin-top:4px;
+
+    color:#FFF;
+
+}
+
+.mr-next-run-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:16px;
+
+}
+
+.mr-next-run-grid span{
+
+    display:block;
+
+    font-size:11px;
+
+    color:rgba(255,255,255,.55);
+
+}
+
+.mr-next-run-grid strong{
+
+    color:#FFF;
+
+}
+/*======================================================
+WEEKLY GOAL CARD
+======================================================*/
+
+
+.mr-weekly-header{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:16px;
+
+    margin-bottom:22px;
+
+}
+
+.mr-weekly-header span{
+
+    font-size:30px;
+
+}
+
+.mr-weekly-header small{
+
+    color:#9DFF00;
+
+    font-size:12px;
+
+    letter-spacing:1px;
+
+}
+
+.mr-weekly-header h2{
+
+    color:#FFF;
+
+    margin-top:4px;
+
+}
+
+.mr-weekly-progress{
+
+    height:16px;
+
+    border-radius:999px;
+
+    overflow:hidden;
+
+    background:#2E3440;
+
+    margin:20px 0;
+
+}
+
+.mr-weekly-fill{
+
+    height:100%;
+
+    background:#9DFF00;
+
+    border-radius:999px;
+
+    transition:.4s;
+
+}
+
+.mr-weekly-footer{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    color:#FFF;
+
+}
+
+.mr-weekly-remaining{
+
+    margin-top:12px;
+
+    color:rgba(255,255,255,.65);
+
+}
+/*======================================================
+WEEKLY GOAL CARD V2
+======================================================*/
+
+
+.mr-weekly-title{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:16px;
+
+    margin-bottom:24px;
+
+}
+
+.mr-weekly-title span{
+
+    font-size:30px;
+
+}
+
+.mr-weekly-title small{
+
+    color:#9DFF00;
+
+    font-size:12px;
+
+    letter-spacing:1px;
+
+}
+
+.mr-weekly-title h2{
+
+    margin-top:4px;
+
+    color:#FFF;
+
+}
+
+.mr-weekly-bar{
+
+    height:16px;
+
+    background:#303641;
+
+    border-radius:999px;
+
+    overflow:hidden;
+
+    margin-bottom:18px;
+
+}
+
+.mr-weekly-bar-fill{
+
+    height:100%;
+
+    background:#9DFF00;
+
+    border-radius:999px;
+
+}
+
+.mr-weekly-info{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    color:#FFF;
+
+    margin-bottom:10px;
+
+}
+
+.mr-weekly-remaining{
+
+    color:rgba(255,255,255,.70);
+
+}
+/*======================================================
+RUN WEEK GOAL
+======================================================*/
+
+.mr-run-week-card{
+
+    background:#1B1F28;
+
+    border-radius:28px;
+
+    padding:26px;
+
+    border:1px solid rgba(255,255,255,.08);
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:22px;
+
+}
+
+.mr-run-week-header{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:16px;
+
+}
+
+.mr-run-week-icon{
+
+    width:58px;
+
+    height:58px;
+
+    border-radius:18px;
+
+    background:rgba(157,255,0,.10);
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-size:28px;
+
+}
+
+.mr-run-week-header small{
+
+    color:#9DFF00;
+
+    font-size:12px;
+
+    font-weight:700;
+
+    letter-spacing:1px;
+
+}
+
+.mr-run-week-header h2{
+
+    margin-top:6px;
+
+    color:#FFFFFF;
+
+    font-size:34px;
+
+    font-weight:800;
+
+}
+
+.mr-run-week-progress{
+
+    height:16px;
+
+    background:#303641;
+
+    border-radius:999px;
+
+    overflow:hidden;
+
+}
+
+.mr-run-week-progress-fill{
+
+    height:100%;
+
+    background:#9DFF00;
+
+    border-radius:999px;
+
+}
+
+.mr-run-week-footer{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    color:#FFFFFF;
+
+    font-size:16px;
+
+}
+
+.mr-run-week-left{
+
+    color:rgba(255,255,255,.75);
+
+    font-size:15px;
+
+}
+
+.mr-run-week-left strong{
+
+    color:#9DFF00;
+
+}
+/*======================================================
+RUN LOG CARD
+======================================================*/
+
+.mr-run-log-card{
+
+    background:#1B1F28;
+
+    border-radius:24px;
+
+    padding:24px;
+
+    border:1px solid rgba(255,255,255,.08);
+
+    box-shadow:0 20px 40px rgba(0,0,0,.22);
+
+}
+
+.mr-run-log-header{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:14px;
+
+    margin-bottom:10px;
+
+}
+
+.mr-run-log-icon{
+
+    width:48px;
+    height:48px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    border-radius:15px;
+
+    background:rgba(157,255,0,.10);
+    border:1px solid rgba(157,255,0,.14);
+
+    font-size:22px;
+
+    flex-shrink:0;
+
+}
+
+.mr-run-log-header small{
+
+    display:block;
+
+    color:#9DFF00;
+
+    font-size:11px;
+    font-weight:700;
+    letter-spacing:1.5px;
+
+}
+
+.mr-run-log-header h2{
+
+    margin-top:4px;
+
+    color:#FFF;
+
+    font-size:20px;
+
+}
+
+.mr-run-log-intro{
+
+    margin:0 0 22px;
+
+    color:rgba(255,255,255,.58);
+
+    font-size:13px;
+    line-height:1.5;
+
+}
+
+.mr-run-log-form{
+
+    display:flex;
+    flex-direction:column;
+    gap:18px;
+
+}
+
+.mr-run-log-grid{
+
+    display:grid;
+    grid-template-columns:repeat(2,minmax(0,1fr));
+    gap:16px;
+
+}
+
+.mr-run-log-form label{
+
+    display:flex;
+    flex-direction:column;
+    gap:8px;
+
+}
+
+.mr-run-log-form label > span{
+
+    color:rgba(255,255,255,.58);
+
+    font-size:10px;
+    font-weight:700;
+    letter-spacing:1px;
+
+}
+
+.mr-run-log-form input,
+.mr-run-log-form select,
+.mr-run-log-form textarea{
+
+    width:100%;
+
+    border:1px solid rgba(255,255,255,.10);
+    border-radius:14px;
+
+    background:#12161D;
+    color:#FFF;
+
+    font:inherit;
+    font-size:14px;
+
+    outline:none;
+
+    transition:.2s ease;
+
+}
+
+.mr-run-log-form input,
+.mr-run-log-form select{
+
+    height:50px;
+    padding:0 14px;
+
+}
+
+.mr-run-log-form textarea{
+
+    min-height:110px;
+    padding:13px 14px;
+    resize:vertical;
+
+}
+
+.mr-run-log-form input:focus,
+.mr-run-log-form select:focus,
+.mr-run-log-form textarea:focus{
+
+    border-color:rgba(157,255,0,.45);
+    box-shadow:0 0 0 3px rgba(157,255,0,.08);
+
+}
+
+.mr-run-log-form input::placeholder,
+.mr-run-log-form textarea::placeholder{
+
+    color:rgba(255,255,255,.28);
+
+}
+
+.mr-run-log-notes{
+
+    width:100%;
+
+}
+
+.mr-run-log-button{
+
+    width:100%;
+    min-height:54px;
+
+    border:0;
+    border-radius:16px;
+
+    background:#9DFF00;
+    color:#111;
+
+    font-size:14px;
+    font-weight:800;
+    letter-spacing:.3px;
+
+    cursor:pointer;
+
+    transition:transform .15s ease, opacity .15s ease;
+
+}
+
+.mr-run-log-button:hover{
+    opacity:.92;
+}
+
+.mr-run-log-button:active{
+    transform:scale(.99);
+}
+
+.mr-run-log-status{
+
+    min-height:18px;
+
+    text-align:center;
+
+    color:#9DFF00;
+
+    font-size:12px;
+
+    opacity:0;
+    transition:.2s ease;
+
+}
+
+.mr-run-log-status.visible{
+    opacity:1;
+}
+
+/*======================================================
+RUN TYPE + INTERVALS
+======================================================*/
+
+.mr-run-type{
+
+    margin-top:18px;
+
+    color:#9DFF00;
+
+    font-size:11px;
+    font-weight:800;
+    letter-spacing:1.5px;
+
+}
+
+.mr-run-intervals{
+
+    margin:22px 0 4px;
+    padding:16px;
+
+    border-radius:16px;
+
+    background:rgba(255,255,255,.035);
+    border:1px solid rgba(255,255,255,.06);
+
+}
+
+.mr-run-section-label{
+
+    margin-bottom:10px;
+
+    color:rgba(255,255,255,.52);
+
+    font-size:10px;
+    font-weight:800;
+    letter-spacing:1.3px;
+
+}
+
+.mr-run-interval-item{
+
+    display:flex;
+    align-items:center;
+    gap:10px;
+
+    padding:9px 0;
+
+    border-top:1px solid rgba(255,255,255,.06);
+
+    color:#FFF;
+    font-size:13px;
+
+}
+
+.mr-run-interval-item:first-of-type{
+    border-top:0;
+}
+
+.mr-run-interval-item strong{
+    color:#9DFF00;
+    min-width:28px;
+}
+
+.mr-run-interval-text{
+    color:#FFF;
+    font-size:13px;
+    line-height:1.5;
+}
+
+@media (max-width:700px){
+
+    .mr-run-log-grid{
+        grid-template-columns:1fr;
+    }
+
+}

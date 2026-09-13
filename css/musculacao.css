@@ -1,0 +1,106 @@
+/* ==========================================================
+   MUSCULAÇÃO — CONSULTA SIMPLES
+========================================================== */
+
+.mr-strength-page{
+    max-width:900px;
+    margin:0 auto;
+    padding:24px 0 120px;
+}
+
+.mr-strength-header{
+    margin-bottom:24px;
+}
+
+.mr-strength-header small{
+    color:#9DFF00;
+    font-size:11px;
+    font-weight:800;
+    letter-spacing:2px;
+}
+
+.mr-strength-header h1{
+    margin:6px 0 4px;
+    color:#FFF;
+    font-size:32px;
+    line-height:1.1;
+}
+
+.mr-strength-header p{
+    margin:0;
+    color:rgba(255,255,255,.65);
+    font-size:14px;
+}
+
+.mr-strength-list{
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+}
+
+.mr-strength-exercise{
+    display:flex;
+    align-items:center;
+    gap:16px;
+    padding:17px 18px;
+    border-radius:18px;
+    background:#1B1F28;
+    border:1px solid rgba(255,255,255,.07);
+}
+
+.mr-strength-number{
+    width:38px;
+    height:38px;
+    flex-shrink:0;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    border-radius:12px;
+    background:rgba(157,255,0,.08);
+    border:1px solid rgba(157,255,0,.14);
+    color:#9DFF00;
+    font-size:11px;
+    font-weight:800;
+}
+
+.mr-strength-exercise-info{
+    min-width:0;
+    display:flex;
+    flex-direction:column;
+    gap:5px;
+}
+
+.mr-strength-exercise-info strong{
+    color:#FFF;
+    font-size:16px;
+}
+
+.mr-strength-exercise-info span{
+    color:rgba(255,255,255,.58);
+    font-size:12px;
+}
+
+.mr-strength-note{
+    margin-top:18px;
+    padding:14px 16px;
+    border-radius:16px;
+    background:rgba(157,255,0,.06);
+    border:1px solid rgba(157,255,0,.10);
+    color:rgba(255,255,255,.65);
+    font-size:12px;
+    line-height:1.5;
+}
+
+@media(max-width:600px){
+    .mr-strength-page{
+        padding:18px 0 120px;
+    }
+
+    .mr-strength-header h1{
+        font-size:28px;
+    }
+
+    .mr-strength-exercise{
+        padding:15px;
+    }
+}

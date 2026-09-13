@@ -1,0 +1,55 @@
+:root{
+
+/* ===== CORES ===== */
+
+--bg:#0D1117;
+
+--surface:#171D26;
+
+--surface-2:#1E2530;
+
+--border:rgba(255,255,255,.06);
+
+--primary:#9DFF00;
+
+--primary-hover:#B8FF39;
+
+--text:#FFFFFF;
+
+--text-muted:#9AA6B2;
+
+--success:#2ECC71;
+
+--warning:#F5B942;
+
+--danger:#FF5C5C;
+
+/* ===== DIMENSÕES DO APP ===== */
+
+--app-width: 405px;
+
+/* ===== ESPAÇAMENTOS ===== */
+
+--space-8:8px;
+--space-12:12px;
+--space-16:16px;
+--space-20:20px;
+--space-24:24px;
+--space-32:32px;
+
+/* ===== RAIOS ===== */
+
+--radius-sm:12px;
+--radius-md:18px;
+--radius-lg:24px;
+--radius-xl:32px;
+
+/* ===== SOMBRAS ===== */
+
+--shadow-card:
+0 12px 30px rgba(0,0,0,.28);
+
+--shadow-hero:
+0 20px 60px rgba(0,0,0,.40);
+
+}

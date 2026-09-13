@@ -1,0 +1,156 @@
+/* ==========================================================
+   MISSÃO RIO 2:59
+   APP
+========================================================== */
+
+body {
+    min-height: 100vh;
+
+    margin: 0;
+    padding: 0;
+
+    align-items: flex-start;
+
+    background: #0b0f14;
+
+    color: var(--color-text);
+}
+
+#app {
+    width: 100%;
+    max-width: none;
+
+    min-height: 100vh;
+
+    margin: 0;
+
+    display: flex;
+    flex-direction: column;
+
+    position: relative;
+
+    overflow: hidden;
+
+    background: #10141b;
+}
+
+/* ===========================
+   MAIN
+=========================== */
+
+main {
+    flex: 1;
+    width: 100%;
+
+    padding: 10px 10px 95px;
+
+    box-sizing: border-box;
+}
+
+/* ===========================
+   PAGE
+=========================== */
+
+.mr-page {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-20);
+}
+
+/* ===========================
+   SECTION
+=========================== */
+
+.mr-section {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-16);
+}
+
+/* ===========================
+   CARD BASE
+=========================== */
+
+.mr-card {
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    padding: var(--space-20);
+    box-shadow: var(--shadow-card);
+    transition: var(--transition);
+}
+
+.mr-card:hover {
+    border-color: var(--color-primary);
+    transform: translateY(-2px);
+}
+
+/* ===========================
+   FLEX HELPERS
+=========================== */
+
+.mr-row {
+    display: flex;
+    align-items: center;
+    gap: var(--space-12);
+}
+
+.mr-column {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-12);
+}
+
+.mr-space-between {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* ===========================
+   SPACING HELPERS
+=========================== */
+
+.mt-8 { margin-top: var(--space-8); }
+.mt-16 { margin-top: var(--space-16); }
+.mt-24 { margin-top: var(--space-24); }
+
+.mb-8 { margin-bottom: var(--space-8); }
+.mb-16 { margin-bottom: var(--space-16); }
+.mb-24 { margin-bottom: var(--space-24); }
+
+
+/* ==========================================================
+   DASHBOARD GRID — CORREÇÃO FINAL MOBILE
+   ========================================================== */
+
+.mr-dashboard-grid {
+    width: auto !important;
+    max-width: none !important;
+
+    box-sizing: border-box;
+
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+}
+
+.mr-dashboard-grid > * {
+    min-width: 0 !important;
+    max-width: 100% !important;
+
+    box-sizing: border-box;
+}
+
+@media (max-width: 600px) {
+
+    .mr-dashboard-grid {
+        width: auto !important;
+        max-width: none !important;
+
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr)) !important;
+
+        gap: 10px !important;
+    }
+
+}

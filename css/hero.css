@@ -1,0 +1,168 @@
+.mr-hero{
+
+    position:relative;
+
+    height:420px;
+
+    border-radius:30px;
+
+    overflow:hidden;
+
+    padding:28px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:space-between;
+
+    background:#1B1F28;
+
+    background-size:cover;
+
+    background-position:center;
+
+    box-shadow:
+        0 20px 60px rgba(0,0,0,.45);
+
+}
+
+.mr-hero-overlay{
+
+position:absolute;
+
+inset:0;
+
+background:
+
+linear-gradient(
+
+180deg,
+
+rgba(0,0,0,.10),
+
+rgba(0,0,0,.82)
+
+);
+
+}
+
+.mr-hero-content{
+
+position:relative;
+
+z-index:2;
+
+}
+
+.mr-hero-tag{
+
+display:inline-block;
+
+padding:6px 14px;
+
+border-radius:999px;
+
+background:rgba(157,255,0,.15);
+
+color:#9DFF00;
+
+font-weight:700;
+
+font-size:12px;
+
+letter-spacing:1px;
+
+}
+
+.mr-hero h1{
+
+font-size:64px;
+
+line-height:1;
+
+margin:20px 0 8px;
+
+font-weight:900;
+
+color:#9DFF00;
+
+text-shadow:
+
+0 0 25px rgba(157,255,0,.35);
+
+}
+
+.mr-hero h2{
+
+font-size:30px;
+
+margin:0;
+
+font-weight:700;
+
+color:#fff;
+
+}
+
+.mr-hero p{
+
+margin-top:6px;
+
+opacity:.85;
+
+}
+
+.mr-hero-footer{
+
+position:relative;
+
+z-index:2;
+
+}
+
+.mr-progress-header{
+
+display:flex;
+
+justify-content:space-between;
+
+margin-bottom:10px;
+
+font-weight:700;
+
+}
+
+.mr-progress-track{
+
+height:16px;
+
+border-radius:999px;
+
+background:#303030;
+
+overflow:hidden;
+
+}
+
+.mr-progress-fill{
+
+height:100%;
+
+background:#9DFF00;
+
+border-radius:999px;
+
+transition:.4s;
+
+}
+
+.mr-progress-footer{
+
+margin-top:12px;
+
+font-weight:600;
+
+opacity:.9;
+
+}

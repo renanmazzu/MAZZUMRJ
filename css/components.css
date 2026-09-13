@@ -1,0 +1,332 @@
+/* ==========================================================
+   COMPONENTS
+========================================================== */
+
+/* ===========================
+   HEADER
+=========================== */
+
+
+
+.mr-header-content{
+
+    max-width:var(--app-width);
+
+    margin:auto;
+
+    padding:20px;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+}
+
+.mr-header-title {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+
+    font-size: 1.30rem;
+    font-weight: 700;
+
+    white-space: nowrap;
+    flex-shrink: 1;
+    min-width: 0;
+}
+.mr-header-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    min-width: 0;
+    flex: 1;
+
+    gap: 4px;
+}
+
+.mr-header-subtitle {
+    margin: 0;
+
+    color: #ffffff !important;
+
+    font-size: 0.70rem;
+    font-weight: 700;
+    line-height: 1.1;
+
+    white-space: nowrap;
+
+    text-shadow: 0 1px 4px rgba(0,0,0,.8);
+}
+.mr-header-time {
+    color: #9dff00;
+    font-weight: 900;
+
+    text-shadow:
+        0 0 5px rgba(157,255,0,.45);
+}
+
+.mr-header-subtitle{
+
+    margin-top:4px;
+
+    color:var(--color-text-secondary);
+
+    font-size:.85rem;
+
+}
+
+/* ===========================
+   CARD
+=========================== */
+
+.mr-card{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:16px;
+
+    padding:22px;
+
+    border-radius:18px;
+
+    background:var(--surface);
+
+    border:1px solid var(--border);
+
+}
+
+/* ===========================
+   BUTTON
+=========================== */
+
+.mr-button{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:8px;
+
+    padding:12px 18px;
+
+    border-radius:12px;
+
+    background:var(--color-primary);
+
+    color:white;
+
+    font-weight:600;
+
+    transition:var(--transition);
+
+}
+
+.mr-button:hover{
+
+    background:var(--color-primary-hover);
+
+    transform:translateY(-2px);
+
+}
+
+/* ===========================
+   BADGE
+=========================== */
+
+.mr-badge{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    padding:6px 10px;
+
+    border-radius:999px;
+
+    background:rgba(59,130,246,.15);
+
+    color:var(--color-primary);
+
+    font-size:.80rem;
+
+    font-weight:600;
+
+}
+
+/* ==========================================================
+   HEADER
+========================================================== */
+
+
+
+.mr-header__left{
+
+    display:flex;
+    flex-direction:column;
+
+}
+
+.mr-header__title{
+
+    font-size:1.6rem;
+    font-weight:700;
+    margin:0;
+
+}
+
+.mr-header__subtitle{
+
+    margin-top:4px;
+
+    opacity:.65;
+
+    font-size:.9rem;
+
+}
+
+.mr-header__badge{
+
+    width:48px;
+    height:48px;
+
+    border-radius:16px;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    font-size:22px;
+
+    background:rgba(255,255,255,.06);
+
+    border:1px solid rgba(255,255,255,.08);
+
+}
+
+/* ==========================================================
+   HEADER
+========================================================== */
+
+.mr-header{
+
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+
+    margin-bottom:28px;
+
+}
+
+.mr-header-center{
+
+    display:flex;
+    align-items:center;
+    gap:14px;
+
+}
+
+.mr-logo{
+
+    width:56px;
+    height:56px;
+
+    border-radius:18px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #9EF01A,
+            #6FD900
+        );
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    color:#071008;
+
+    font-size:28px;
+
+    font-weight:900;
+
+    box-shadow:
+
+        0 12px 24px rgba(158,240,26,.35);
+
+}
+
+.mr-header-text h1{
+
+    margin:0;
+
+    font-size:1.25rem;
+
+    font-weight:800;
+
+}
+
+.mr-header-text span{
+
+    color:#9EF01A;
+
+}
+
+.mr-header-text p{
+
+    margin-top:4px;
+
+    font-size:.85rem;
+
+    color:#98A1AD;
+
+}
+
+.mr-header-btn{
+
+    width:48px;
+    height:48px;
+
+    border-radius:16px;
+
+    border:none;
+
+    background:#181e27;
+
+    color:#fff;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    transition:.25s;
+
+    cursor:pointer;
+
+    box-shadow:
+        0 10px 24px rgba(0,0,0,.35);
+
+}
+
+
+
+.mr-header-btn:hover{
+
+    background:#1b232d;
+
+}
+
+.mr-header-btn svg{
+
+    width:22px;
+    height:22px;
+
+}

@@ -1,0 +1,3578 @@
+/* =====================================================
+   HERO PREMIUM
+===================================================== */
+
+.mr-v3-hero{
+
+   animation:heroFloat 8s ease-in-out infinite;
+    position:relative;
+    overflow:hidden;
+
+    height:430px;
+
+    padding:28px;
+
+    border-radius:32px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:space-between;
+    background-image:
+linear-gradient(
+rgba(0,0,0,.18),rgba(0,0,0,.60)
+),
+url("../assets/images/dashboard/hero-rio.jpg");
+
+background-size:cover;
+background-position:center;
+background-repeat:no-repeat;
+
+border:1px solid rgba(255,255,255,.06);
+
+}
+.mr-hero::before{
+
+content:"";
+
+position:absolute;
+
+top:-120px;
+
+right:-120px;
+
+width:260px;
+
+height:260px;
+
+border-radius:50%;
+
+background:
+
+radial-gradient(
+
+circle,
+
+rgba(157,255,0,.12),
+
+transparent 70%
+
+);
+
+filter:blur(10px);
+
+pointer-events:none;
+box-shadow:
+
+0 30px 70px rgba(0,0,0,.45),
+
+0 0 60px rgba(157,255,0,.08);
+
+}
+
+.mr-v3-overlay{
+
+position:absolute;
+inset:0;
+
+background:
+
+linear-gradient(
+180deg,
+rgba(0,0,0,.18) 0%,
+rgba(0,0,0,.35) 35%,
+rgba(0,0,0,.70) 100%
+),
+
+linear-gradient(
+90deg,
+rgba(0,0,0,.35),
+rgba(0,0,0,.05)
+);
+
+}
+
+.mr-v3-tag{
+
+display:inline-block;
+
+padding:8px 16px;
+
+border-radius:999px;
+
+background:rgba(157,255,0,.15);
+
+color:#9DFF00;
+
+font-weight:700;
+
+font-size:12px;
+
+letter-spacing:1px;
+
+}
+.mr-v3-content{
+
+position:relative;
+
+z-index:2;
+
+max-width:100%;
+
+}
+
+.mr-v3-content h1{
+
+    animation:heroPulse 4s ease-in-out infinite;
+
+margin:18px 0 10px;
+
+font-size:clamp(54px, 14vw, 64px);
+
+font-weight:900;
+
+line-height:.92;
+
+letter-spacing:-3px;
+
+white-space:nowrap;
+
+color:#9DFF00;
+
+text-shadow:
+0 0 12px rgba(157,255,0,.25),
+0 0 30px rgba(157,255,0,.18);
+
+}
+
+.mr-v3-content h2{
+
+margin:0;
+
+font-size:42px;
+
+font-weight:800;
+
+color:#FFFFFF;
+
+line-height:1.1;
+
+}
+
+.mr-v3-content p{
+
+margin-top:10px;
+
+font-size:15px;
+
+color:rgba(255,255,255,.82);
+
+}
+
+.mr-v3-footer{
+
+position:relative;
+
+z-index:2;
+
+}
+
+.mr-v3-progress-top{
+
+display:flex;
+
+justify-content:space-between;
+
+margin-bottom:10px;
+
+font-weight:700;
+
+}
+
+.mr-weekly-card .mr-progress{
+
+    width:100%;
+
+    height:16px;
+
+    border-radius:999px;
+
+    margin-top:20px;
+
+    background:rgba(255,255,255,.08);
+
+    overflow:hidden;
+
+}
+
+.mr-progress-fill{
+
+    height:100%;
+
+    border-radius:999px;
+
+    background:linear-gradient(
+        90deg,
+        #66ff00,
+        #9dff00
+    );
+
+    box-shadow:
+        0 0 18px rgba(157,255,0,.45);
+
+}
+
+.mr-progress-fill::after{
+
+content:"";
+
+position:absolute;
+
+top:0;
+
+left:-45%;
+
+width:40%;
+
+height:100%;
+
+background:
+
+linear-gradient(
+
+90deg,
+
+transparent,
+
+rgba(255,255,255,.45),
+
+transparent
+
+);
+
+animation:progressShine 3s linear infinite;
+
+}
+
+.mr-v3-days{
+
+margin-top:12px;
+
+font-weight:600;
+
+}
+/* =======================================================
+   CARD V3
+======================================================= */
+
+.mr-v3-card{
+
+    transition:
+transform .28s ease,
+box-shadow .28s ease,
+border-color .28s ease;
+
+display:flex;
+
+flex-direction:column;
+
+padding:24px;
+
+border-radius:28px;
+
+background:
+linear-gradient(
+180deg,
+rgba(28,34,44,.82),
+rgba(23,28,37,.92)
+);
+
+border:
+
+1px solid rgba(255,255,255,.07);
+
+outline:
+
+1px solid rgba(255,255,255,.02);
+
+outline-offset:-1px;
+
+box-shadow:var(--shadow-card);
+
+overflow:visible;
+
+position:relative;
+
+backdrop-filter:blur(16px);
+
+-webkit-backdrop-filter:blur(16px);
+
+border:1px solid rgba(255,255,255,.08);
+
+box-shadow:
+
+0 20px 55px rgba(0,0,0,.42),
+
+0 0 1px rgba(255,255,255,.08),
+
+inset 0 1px rgba(255,255,255,.05);
+
+}
+
+.mr-workout-card,
+.mr-weekly-card,
+.mr-last-card,
+.mr-fitness-card{
+
+min-height:320px;
+
+display:flex;
+
+flex-direction:column;
+
+justify-content:space-between;
+
+}
+.mr-workout-card>*,
+.mr-weekly-card>*,
+.mr-last-card>*,
+.mr-fitness-card>*{
+
+position:relative;
+
+z-index:2;
+
+}
+.mr-workout-card{
+
+background:
+linear-gradient(
+rgba(15,20,25,.70),
+rgba(15,20,25,.92)
+),
+url("../assets/images/dashboard/workout-bg.jpg");
+
+background-size:cover;
+background-position:center;
+
+transform:none;
+
+border:1px solid rgba(157,255,0,.12);
+
+box-shadow:
+
+0 20px 50px rgba(0,0,0,.45),
+
+0 0 25px rgba(157,255,0,.08);
+
+min-height: 320px;
+
+
+}
+.mr-v3-card::before{
+
+content:"";
+
+position:absolute;
+
+left:0;
+
+right:0;
+
+top:0;
+
+height:1px;
+
+background:
+
+linear-gradient(
+
+90deg,
+
+transparent,
+
+rgba(255,255,255,.18),
+
+transparent
+
+);
+
+pointer-events:none;
+height:380px;
+
+}
+
+.mr-v3-card-header{
+
+display:flex;
+
+align-items:flex-start;
+
+gap:12px;
+
+margin-bottom:18px;
+
+}
+
+.mr-v3-icon{
+
+    animation:iconFloat 5s ease-in-out infinite;
+width:52px;
+height:52px;
+
+display:flex;
+align-items:center;
+justify-content:center;
+
+border-radius:16px;
+
+background:
+
+linear-gradient(
+
+180deg,
+
+rgba(65,74,89,.95),
+
+rgba(34,42,53,.95)
+
+);
+box-shadow:
+
+inset 0 1px rgba(255,255,255,.08),
+
+0 10px 20px rgba(0,0,0,.35),
+
+0 0 18px rgba(157,255,0,.10);
+
+border:1px solid rgba(157,255,0,.15);
+
+box-shadow:
+
+0 0 18px rgba(157,255,0,.18),
+
+inset 0 1px rgba(255,255,255,.08);
+
+font-size:24px;
+
+backdrop-filter:blur(8px);
+
+flex-shrink:0;
+
+margin-top:2px;
+
+}
+
+.mr-v3-card small{
+
+letter-spacing:1.5px;
+
+font-size:11px;
+
+opacity:.7;
+
+}
+
+.mr-v3-card small{
+
+font-size:10px;
+
+letter-spacing:2px;
+
+text-transform:uppercase;
+
+color:rgba(255,255,255,.55);
+
+font-weight:600;
+
+}
+
+.mr-v3-card p{
+
+font-size:13px;
+
+line-height:1.5;
+
+color:rgba(255,255,255,.72);
+
+}
+.mr-weekly-card{
+
+display:flex;
+
+flex-direction:column;
+
+justify-content:space-between;
+
+align-items:center;
+
+text-align:center;
+
+}
+.mr-weekly-card .mr-v3-card-header{
+
+display:flex;
+
+flex-direction:column;
+
+align-items:center;
+
+justify-content:center;
+
+gap:12px;
+
+margin-bottom:18px;
+
+text-align:center;
+
+}
+.mr-weekly-card small{
+
+    font-size:10px;
+
+letter-spacing:2.5px;
+
+font-weight:800;
+
+color:rgba(255,255,255,.72);
+
+}
+.mr-last-card{
+
+background:
+linear-gradient(
+rgba(15,20,25,.70),
+rgba(15,20,25,.92)
+),
+url("../assets/images/dashboard/lastworkout-bg.jpg");
+
+background-size:cover;
+background-position:center;
+opacity:.94;
+
+}
+.mr-fitness-card{
+
+   display:flex;
+flex-direction:column;
+flex:1;
+
+   min-height:460px;
+
+}
+
+.mr-v3-workout-info{
+
+display:flex;
+
+justify-content:space-between;
+
+padding:16px 0;
+
+margin-bottom:20px;
+
+border-top:1px solid rgba(255,255,255,.06);
+
+border-bottom:1px solid rgba(255,255,255,.06);
+
+}
+
+.mr-v3-workout-info span{
+
+display:block;
+
+font-size:11px;
+
+opacity:.7;
+
+}
+
+.mr-v3-workout-info strong{
+
+font-size:22px;
+
+font-weight:800;
+
+color:#FFF;
+
+}
+
+.mr-v3-button{
+
+width:100%;
+
+height:48px;
+
+border:none;
+
+border-radius:16px;
+
+background:var(--primary);
+
+color:#111;
+
+font-weight:800;
+
+font-size:14px;
+
+cursor:pointer;
+
+box-shadow:
+
+0 0 0 rgba(157,255,0,0);
+font-size:15px;
+
+letter-spacing:.3px;
+
+}
+
+.mr-v3-button:hover{
+
+box-shadow:
+
+0 0 25px rgba(157,255,0,.35);
+
+}
+
+.mr-v3-button:disabled{
+
+background:#2F7D32;
+
+color:var(--text);
+
+cursor:default;
+
+transform:none;
+
+}
+
+.mr-week-dot{
+
+width:14px;
+
+height:14px;
+
+border-radius:50%;
+
+box-shadow:
+
+0 0 14px rgba(157,255,0,.45);
+
+}
+
+.mr-week-dot.active{
+
+background:#9DFF00;
+
+box-shadow:
+
+0 0 12px rgba(157,255,0,.60),
+
+0 0 24px rgba(157,255,0,.30);
+
+transform:scale(1.08);
+
+}
+.mr-v3-badge{
+
+display:inline-flex;
+
+align-items:center;
+
+gap:8px;
+
+padding:8px 16px;
+
+border-radius:999px;
+
+background:rgba(157,255,0,.12);
+
+border:1px solid rgba(157,255,0,.18);
+
+color:var(--primary);
+
+font-size:12px;
+
+font-weight:700;
+
+letter-spacing:1px;
+
+backdrop-filter:blur(8px);
+
+box-shadow:
+
+0 0 18px rgba(157,255,0,.12);
+
+animation:
+
+badgeGlow 4s ease-in-out infinite;
+}
+/* =====================================================
+   HERO FOOTER
+===================================================== */
+
+.mr-v3-footer{
+
+position:relative;
+
+z-index:2;
+
+}
+
+.mr-v3-top{
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:flex-end;
+
+margin-bottom:18px;
+
+}
+.mr-v3-week span{
+
+display:block;
+
+font-size:11px;
+
+letter-spacing:2px;
+
+color:rgba(255,255,255,.65);
+
+margin-bottom:4px;
+
+}
+
+.mr-v3-week strong{
+
+font-size:20px;
+
+font-weight:800;
+
+color:#FFF;
+
+}
+.mr-v3-mission-status{
+
+padding:8px 14px;
+
+border-radius:999px;
+
+background:rgba(157,255,0,.14);
+
+border:1px solid rgba(157,255,0,.25);
+
+color:var(--primary);
+
+font-size:12px;
+
+font-weight:700;
+
+letter-spacing:1px;
+
+}
+
+.mr-week-grid{
+
+display:grid;
+
+grid-template-columns:repeat(18,1fr);
+
+gap:6px;
+
+margin:18px 0;
+
+}
+
+.mr-week-block{
+
+height:10px;
+
+border-radius:999px;
+
+background:#2F3742;
+
+transition:.35s;
+
+}
+
+.mr-week-block.active{
+
+background:linear-gradient(
+
+90deg,
+
+#7FFF00,
+
+#B8FF39
+
+);
+
+box-shadow:
+
+0 0 14px rgba(157,255,0,.45);
+
+}
+.mr-v3-days{
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+gap:8px;
+
+font-size:15px;
+
+font-weight:700;
+
+color:#FFF;
+
+}
+.mr-v3-hero::after{
+
+animation:heroGlow 6s ease-in-out infinite;
+    content:"";
+
+position:absolute;
+
+right:-40px;
+
+bottom:-40px;
+
+width:220px;
+
+height:220px;
+
+border-radius:50%;
+
+background:
+
+radial-gradient(
+
+rgba(157,255,0,.12),
+
+transparent 70%
+
+);
+
+filter:blur(10px);
+
+}
+/*==================================================
+CARD V3
+==================================================*/
+
+.mr-v3-card{
+
+position:relative;
+
+display:flex;
+
+flex-direction:column;
+
+justify-content:space-between;
+
+padding:22px;
+
+
+border-radius:26px;
+
+background-color:#1C222C;
+
+border:1px solid rgba(255,255,255,.05);
+
+box-shadow:
+
+0 18px 40px rgba(0,0,0,.28);
+
+transition:.28s;
+
+overflow:hidden;
+
+}
+
+.mr-v3-card:hover{
+
+transform:
+
+translateY(-8px)
+
+scale(1.015);
+
+border-color:
+
+rgba(157,255,0,.18);
+
+box-shadow:
+
+0 35px 70px rgba(0,0,0,.50),
+
+0 0 25px rgba(157,255,0,.08);
+
+}
+.mr-v3-card:hover::after{
+
+opacity:1;
+
+left:160%;
+
+transition:1s;
+
+}
+/*============================*/
+
+.mr-v3-card-icon {
+    width: 50px;
+    height: 50px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 14px;
+
+    background:
+        radial-gradient(
+            circle at 50% 45%,
+            rgba(157, 255, 0, 0.22),
+            rgba(157, 255, 0, 0.06) 55%,
+            rgba(0, 0, 0, 0.18) 100%
+        );
+
+    border: 1px solid rgba(157, 255, 0, 0.55);
+
+    backdrop-filter: blur(10px);
+
+    box-shadow:
+        0 0 8px rgba(157, 255, 0, 0.30),
+        0 0 18px rgba(157, 255, 0, 0.16),
+        inset 0 0 14px rgba(157, 255, 0, 0.12);
+
+    flex-shrink: 0;
+
+    position: relative;
+
+    overflow: hidden;
+}
+.mr-running-icon {
+    width: 58px;
+    height: 58px;
+    padding: 0;
+    overflow: visible;
+    border: none;
+    background: transparent;
+    box-shadow: none;
+}
+
+.mr-running-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+    filter:
+        drop-shadow(0 0 5px rgba(157, 255, 0, .8))
+        drop-shadow(0 0 12px rgba(157, 255, 0, .35));
+}
+.mr-running-icon {
+    padding: 0;
+    overflow: hidden;
+}
+
+.mr-running-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.mr-v3-card-icon svg {
+    width: 24px;
+    height: 24px;
+
+    stroke: #9dff00;
+    stroke-width: 2.4;
+
+    filter:
+        drop-shadow(0 0 3px rgba(157, 255, 0, 0.95))
+        drop-shadow(0 0 7px rgba(157, 255, 0, 0.55));
+
+    transition:
+        transform 0.2s ease,
+        filter 0.2s ease;
+}
+.mr-v3-card-icon::before {
+    content: "";
+
+    position: absolute;
+
+    width: 70%;
+    height: 70%;
+
+    top: -35%;
+    left: -35%;
+
+    background: rgba(255, 255, 255, 0.10);
+
+    transform: rotate(35deg);
+
+    filter: blur(8px);
+
+    pointer-events: none;
+}
+.mr-v3-card-title{
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+}
+.mr-v3-card-title small{
+
+display:block;
+
+font-size:10px;
+
+letter-spacing:2px;
+
+text-transform:uppercase;
+
+color:rgba(255,255,255,.60);
+
+margin-bottom:4px;
+
+}
+
+.mr-v3-card-title strong{
+
+display:block;
+
+font-size:16px;
+
+font-weight:800;
+
+line-height:1.15;
+
+color:#FFF;
+
+word-break:break-word;
+
+}
+.mr-fitness-card .mr-v3-card-title strong{
+
+font-size:20px;
+
+}
+.mr-v3-divider{
+
+width:100%;
+
+height:1px;
+
+margin:18px 0;
+
+background:rgba(255,255,255,.06);
+
+}
+.mr-v3-footer{
+
+margin-top:auto;
+
+padding-top:18px;
+
+border-top:1px solid rgba(255,255,255,.06);
+
+}
+/*=========================================
+WORKOUT V3
+=========================================*/
+
+.mr-v3-date{
+
+margin:18px 0;
+
+font-size:13px;
+
+color:rgba(255,255,255,.72);
+
+font-weight:500;
+
+}
+
+.mr-v3-metrics{
+
+display:flex;
+
+justify-content:space-between;
+
+gap:18px;
+
+padding-top:14px;
+
+border-top:1px solid rgba(255,255,255,.08);
+
+}
+
+.mr-v3-metrics div{
+
+    display:flex;
+
+    flex-direction:column;
+
+}
+
+.mr-v3-metrics span{
+
+display:block;
+
+font-size:10px;
+
+letter-spacing:1px;
+
+text-transform:uppercase;
+
+color:rgba(255,255,255,.55);
+
+margin-bottom:4px;
+
+}
+
+.mr-v3-metrics strong{
+
+font-size:22px;
+
+font-weight:800;
+
+color:#FFF;
+
+}
+.mr-v3-btn-start{
+
+width:100%;
+
+transition:.25s;
+
+height:54px;
+
+border:none;
+
+border-radius:18px;
+
+background:linear-gradient(
+
+180deg,
+
+#9EFF00,
+
+#8EE000
+
+);
+
+color:#111;
+
+font-size:15px;
+
+font-weight:900;
+
+letter-spacing:1px;
+
+cursor:pointer;
+
+transition:.25s;
+
+}
+
+.mr-v3-btn-start:hover{
+
+transform:translateY(-2px);
+
+box-shadow:
+
+0 8px 22px rgba(157,255,0,.35);
+
+}
+
+.mr-v3-btn-complete{
+
+height:52px;
+
+border:none;
+
+border-radius:16px;
+
+background:
+linear-gradient(
+90deg,
+#2D8E39,
+#3FAE47
+);
+
+color:#FFF;
+
+font-weight:800;
+
+font-size:14px;
+
+letter-spacing:.5px;
+
+box-shadow:
+0 12px 30px rgba(63,174,71,.30);
+
+}
+/* =====================================================
+   LAST WORKOUT V3
+===================================================== */
+
+.mr-v3-last-grid{
+
+display:grid;
+
+grid-template-columns:repeat(2,1fr);
+
+gap:12px;
+
+margin:18px 0;
+
+text-align:center;
+
+}
+
+.mr-v3-last-grid div{
+
+display:flex;
+
+flex-direction:column;
+
+gap:6px;
+
+}
+
+.mr-v3-last-grid span{
+
+font-size:10px;
+
+text-transform:uppercase;
+
+letter-spacing:1px;
+
+color:#7E8798;
+
+}
+
+.mr-v3-last-grid strong{
+
+font-size:19px;
+
+font-weight:700;
+
+line-height:1.2;
+
+color:#FFF;
+
+}
+
+.mr-v3-rating{
+
+margin-top:18px;
+
+font-size:18px;
+
+letter-spacing:2px;
+
+text-align:center;
+
+}
+
+.mr-v3-status{
+
+margin-top:8px;
+
+text-align:center;
+
+font-size:13px;
+
+font-weight:700;
+
+color:#9DFF00;
+
+}
+.mr-v3-last-duration{
+
+margin-top:16px;
+
+text-align:center;
+
+}
+
+.mr-v3-last-duration span{
+
+display:block;
+
+font-size:10px;
+
+letter-spacing:1px;
+
+text-transform:uppercase;
+
+color:#7E8798;
+
+margin-bottom:6px;
+
+}
+
+.mr-v3-last-duration strong{
+
+font-size:20px;
+
+font-weight:700;
+
+color:#FFF;
+
+}
+/* =====================================================
+   COUNTDOWN V3
+===================================================== */
+
+.mr-v3-count-number{
+
+margin-top:24px;
+
+font-size:54px;
+
+font-weight:800;
+
+text-align:center;
+
+color:#FFFFFF;
+
+line-height:1;
+
+}
+
+.mr-v3-count-label{
+
+margin-top:8px;
+
+text-align:center;
+
+font-size:12px;
+
+letter-spacing:3px;
+
+color:#9DFF00;
+
+font-weight:700;
+
+}
+
+.mr-v3-count-dates{
+
+margin-top:18px;
+
+display:flex;
+
+flex-direction:column;
+
+align-items:center;
+
+gap:8px;
+
+}
+
+.mr-v3-count-dates div{
+
+font-size:13px;
+
+font-weight:600;
+
+color:#C9D1DD;
+
+}
+
+.mr-v3-arrow{
+
+font-size:18px;
+
+color:#9DFF00;
+
+}
+
+.mr-fitness-level{
+
+margin: top 10px;
+
+text-align:center;
+
+font-size:13px;
+
+letter-spacing:2px;
+
+font-weight:700;
+
+color:#FFFFFF;
+
+}
+
+.mr-fitness-bar{
+
+    height:10px;
+
+    border-radius:999px;
+
+    overflow:hidden;
+
+    background:rgba(255,255,255,.06);
+
+    position:relative;
+
+}
+
+.mr-fitness-fill{
+
+    height:100%;
+
+    border-radius:999px;
+
+    background:
+
+    linear-gradient(
+        90deg,
+        #65ff00,
+        #b7ff00
+    );
+
+    box-shadow:
+
+    0 0 20px rgba(157,255,0,.5);
+
+}
+
+.mr-fitness-checks span{
+
+font-size:12px;
+
+}
+
+.mr-fitness-checks small{
+
+    font-size:10px;
+
+    color:rgba(255,255,255,.72);
+
+}
+/* =====================================================
+   PREMIUM INTERACTIONS
+===================================================== */
+
+.mr-v3-card{
+
+transition:
+
+transform .30s ease,
+
+box-shadow .30s ease,
+
+border-color .30s ease,
+
+background .30s ease;
+
+cursor:pointer;
+
+}
+.mr-v3-card:hover{
+
+transform:translateY(-6px);
+
+border-color:rgba(157,255,0,.30);
+
+box-shadow:
+
+0 18px 40px rgba(0,0,0,.45),
+
+0 0 28px rgba(157,255,0,.08);
+
+}
+.mr-v3-card:hover .mr-v3-card-icon{
+
+transform:scale(1.08);
+
+box-shadow:
+
+0 0 20px rgba(157,255,0,.20);
+
+}
+.mr-v3-card:hover{
+
+transform:translateY(-5px);
+
+border-color:rgba(157,255,0,.18);
+
+box-shadow:
+
+0 16px 35px rgba(0,0,0,.35);
+
+}
+.mr-v3-card:hover .mr-v3-card-icon{
+
+transform:scale(1.08);
+
+box-shadow:
+
+0 0 18px rgba(157,255,0,.28);
+
+}
+@keyframes heroPulse{
+
+0%{
+transform:scale(1);
+}
+
+50%{
+transform:scale(1.02);
+}
+
+100%{
+transform:scale(1);
+}
+
+}
+
+/* ==========================================
+   PREMIUM CARD HOVER
+========================================== */
+
+.mr-v3-card{
+
+    transform-style:preserve-3d;
+
+    transition:
+        transform .35s cubic-bezier(.2,.8,.2,1),
+        box-shadow .35s,
+        border-color .35s,
+        background-size .45s;
+
+    background-size:100%;
+}
+
+.mr-v3-card:hover{
+
+    transform:
+        translateY(-8px)
+        rotateX(4deg)
+        scale(1.02);
+
+    box-shadow:
+        0 30px 70px rgba(0,0,0,.55),
+        0 0 40px rgba(157,255,0,.10);
+
+    border-color:
+        rgba(157,255,0,.18);
+
+    background-size:104%;
+}
+/* ==========================================
+   PREMIUM SHINE EFFECT
+========================================== */
+
+.mr-v3-card::after{
+
+    content:"";
+
+    position:absolute;
+
+    top:-60%;
+
+    left:-120%;
+
+    width:70%;
+
+    height:220%;
+
+    background:linear-gradient(
+
+        115deg,
+
+        transparent,
+
+        rgba(255,255,255,.18),
+
+        transparent
+
+    );
+
+    transform:rotate(18deg);
+
+    transition:left .75s ease;
+
+    pointer-events:none;
+
+}
+
+.mr-v3-card:hover::after{
+
+    left:170%;
+
+}
+/* ==========================================
+   HERO PULSE
+========================================== */
+
+@keyframes heroPulse{
+
+    0%{
+
+        transform:scale(1);
+
+        text-shadow:
+
+        0 0 12px rgba(157,255,0,.25),
+
+        0 0 30px rgba(157,255,0,.18);
+
+    }
+
+    50%{
+
+        transform:scale(1.02);
+
+        text-shadow:
+
+        0 0 22px rgba(157,255,0,.45),
+
+        0 0 60px rgba(157,255,0,.35);
+
+    }
+
+    100%{
+
+        transform:scale(1);
+
+        text-shadow:
+
+        0 0 12px rgba(157,255,0,.25),
+
+        0 0 30px rgba(157,255,0,.18);
+
+    }
+
+}
+/*=========================================
+BACKGROUND PARALLAX
+=========================================*/
+
+.mr-workout-card,
+.mr-weekly-card,
+.mr-last-card,
+.mr-fitness-card{
+
+    background-size:105%;
+
+    transition:
+
+        background-size .6s ease,
+
+        transform .35s ease;
+
+}
+
+.mr-workout-card:hover,
+.mr-weekly-card:hover,
+.mr-last-card:hover,
+.mr-fitness-card:hover{
+
+    background-size:112%;
+
+}
+@keyframes progressShine{
+
+0%{
+
+left:-40%;
+
+}
+
+100%{
+
+left:140%;
+
+}
+
+}
+@keyframes heroFloat{
+
+    0%{
+        transform:translateY(0px);
+    }
+
+    50%{
+        transform:translateY(-4px);
+    }
+
+    100%{
+        transform:translateY(0px);
+    }
+
+}
+@keyframes heroGlow{
+
+0%{
+
+opacity:.35;
+transform:scale(1);
+
+}
+
+50%{
+
+opacity:.8;
+transform:scale(1.12);
+
+}
+
+100%{
+
+opacity:.35;
+transform:scale(1);
+
+}
+
+}
+@keyframes scorePulse{
+
+0%{
+
+transform:scale(1);
+
+}
+
+50%{
+
+transform:scale(1.04);
+
+}
+
+100%{
+
+transform:scale(1);
+
+}
+
+}
+@keyframes iconFloat{
+
+0%{
+
+transform:translateY(0);
+
+}
+
+50%{
+
+transform:translateY(-3px);
+
+}
+
+100%{
+
+transform:translateY(0);
+
+}
+
+}
+.mr-v3-hero::before{
+
+content:"";
+
+position:absolute;
+
+top:-30%;
+
+left:-120%;
+
+width:70%;
+
+height:180%;
+
+background:
+
+linear-gradient(
+
+90deg,
+
+transparent,
+
+rgba(255,255,255,.08),
+
+transparent
+
+);
+
+transform:rotate(18deg);
+
+animation:heroShine 12s linear infinite;
+
+pointer-events:none;
+
+z-index:1;
+
+}
+@keyframes heroShine{
+
+0%{
+
+left:-120%;
+
+}
+
+100%{
+
+left:180%;
+
+}
+
+}
+.mr-v3-card::after{
+
+content:"";
+
+position:absolute;
+
+top:-120%;
+
+left:-120%;
+
+width:120%;
+
+height:220%;
+
+background:
+
+linear-gradient(
+
+90deg,
+
+transparent,
+
+rgba(255,255,255,.05),
+
+transparent
+
+);
+
+transform:rotate(20deg);
+
+opacity:0;
+
+transition:.5s;
+
+pointer-events:none;
+
+}
+@keyframes badgeGlow{
+
+0%{
+
+box-shadow:
+
+0 0 10px rgba(157,255,0,.10);
+
+}
+
+50%{
+
+box-shadow:
+
+0 0 24px rgba(157,255,0,.28);
+
+}
+
+100%{
+
+box-shadow:
+
+0 0 10px rgba(157,255,0,.10);
+
+}
+
+}
+/* ==========================================
+   TÍTULOS INDIVIDUAIS DOS CARDS
+========================================== */
+
+.mr-workout-title{
+
+    display:block;
+
+    font-size:17px;
+
+    font-weight:800;
+
+    line-height:1.05;
+
+    color:#FFFFFF;
+
+    text-shadow:0 2px 8px rgba(0,0,0,.55);
+
+}
+
+.mr-weekly-title{
+
+    font-size:44px;
+
+    font-weight:900;
+
+    color:#FFF;
+
+    text-shadow:0 2px 10px rgba(0,0,0,.45);
+
+}
+
+.mr-fitness-title{
+
+    font-size:22px;
+
+    font-weight:800;
+
+    color:#FFF;
+
+    letter-spacing:.5px;
+
+}
+.mr-v3-card strong{
+
+    color:#FFF;
+
+}
+.mr-v3-card small{
+
+    color:rgba(255,255,255,.72);
+
+}
+/* ==========================================================
+   NOVA ESTRUTURA DOS CARDS PREMIUM
+========================================================== */
+
+.mr-card-top{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:14px;
+
+    flex:1;
+
+}
+
+.mr-card-header{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:14px;
+
+}
+
+.mr-card-icon{
+
+    width:64px;
+height:64px;
+
+    border-radius:16px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    flex-shrink:0;
+
+    background:rgba(157,255,0,.12);
+
+    border:1px solid rgba(157,255,0,.25);
+
+    backdrop-filter:blur(8px);
+
+    font-size:30px;
+
+}
+
+.mr-card-heading{
+
+    flex:1;
+
+    min-width:0;
+
+}
+
+.mr-card-heading small{
+
+    display:block;
+
+    margin-bottom:4px;
+
+    font-size:10px;
+
+    letter-spacing:2px;
+
+    color:rgba(255,255,255,.65);
+
+}
+
+.mr-card-heading h3{
+
+    margin:0;
+
+    font-size:16px;
+
+    line-height:1.15;
+
+    font-weight:800;
+
+    color:#FFFFFF;
+
+    word-break:break-word;
+
+}
+
+.mr-card-date{
+
+    font-size:13px;
+
+    color:rgba(255,255,255,.78);
+
+}
+
+.mr-card-divider{
+
+    height:1px;
+
+    background:rgba(255,255,255,.08);
+
+}
+
+.mr-card-metrics{
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:14px;
+
+}
+
+.mr-card-metrics span{
+
+    display:block;
+
+    margin-bottom:4px;
+
+    font-size:10px;
+
+    letter-spacing:1px;
+
+    color:rgba(255,255,255,.55);
+
+}
+
+.mr-card-metrics strong{
+
+    font-size:15px;
+
+    color:#FFF;
+
+}
+
+.mr-card-bottom{
+
+    margin-top:20px;
+
+}
+/* ==========================================
+   WEEKLY CARD
+========================================== */
+
+.mr-weekly-card .mr-card-heading h3{
+
+    font-size:48px;
+
+    font-weight:900;
+
+    line-height:1;
+
+    color:#FFF;
+
+}
+.mr-weekly-card h3{
+
+font-size:56px;
+
+font-weight:900;
+
+line-height:1;
+
+color:#FFF;
+
+margin:12px 0 20px;
+
+text-shadow:
+
+0 0 12px rgba(157,255,0,.20);
+
+}
+
+.mr-weekly-card .mr-card-heading small{
+
+    color:rgba(255,255,255,.72);
+
+}
+
+.mr-week-dots{
+
+display:flex;
+
+justify-content:center;
+
+gap:12px;
+
+margin:22px 0;
+
+}
+/* ==========================================
+   LAST WORKOUT
+========================================== */
+
+.mr-last-card .mr-card-heading h3{
+
+    font-size:16px;
+
+    font-weight:800;
+
+    color:#FFF;
+
+}
+
+.mr-last-card .mr-card-heading small{
+
+    color:rgba(255,255,255,.70);
+
+}
+
+.mr-last-card .mr-card-metrics{
+
+    grid-template-columns:1fr 1fr;
+
+    row-gap:16px;
+
+}
+/* ==========================================
+   FITNESS CARD V4
+========================================== */
+
+
+.mr-fitness-score{
+
+    position:relative;
+
+    z-index:2;
+
+}
+
+.mr-fitness-score::before{
+    display:none;
+}
+
+.mr-fitness-level{
+
+margin-top:8px;
+
+text-align:center;
+
+font-size:16px;
+
+font-weight:700;
+
+letter-spacing:2px;
+
+color:#FFF;
+
+}
+
+.mr-fitness-message{
+
+    text-align:center;
+
+    font-size:14px;
+
+    line-height:1.6;
+
+    color:rgba(255,255,255,.88);
+
+    max-width:180px;
+
+    margin:18px auto;
+
+}
+
+.mr-status-item{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    padding:8px 6px;
+
+    border-radius:10px;
+
+    background:rgba(157,255,0,.08);
+
+    border:1px solid rgba(157,255,0,.22);
+
+    color:#9DFF00;
+
+    font-size:11px;
+
+    font-weight:700;
+
+    transition:.25s;
+
+}
+
+.mr-status-item.active{
+
+    background:rgba(157,255,0,.18);
+
+    box-shadow:0 0 12px rgba(157,255,0,.22);
+
+}
+
+/* =======================================================
+   CARD STRUCTURE
+======================================================= */
+
+.mr-card-header{
+
+display:flex;
+
+align-items:flex-start;
+
+gap:14px;
+
+margin-bottom:18px;
+
+}
+
+.mr-card-body{
+
+flex:1;
+
+display:flex;
+
+flex-direction:column;
+
+justify-content:flex-start;
+
+}
+
+.mr-card-footer{
+
+margin-top:20px;
+display:flex;
+
+flex-direction:column;
+
+align-items:center;
+
+justify-content:center;
+
+}
+.mr-week-score{
+
+    font-size:74px;
+
+    font-weight:900;
+
+    line-height:.9;
+
+    text-align:center;
+
+    color:#FFFFFF;
+
+}
+.mr-week-percent{
+
+    margin-top:12px;
+
+    text-align:center;
+
+    font-size:22px;
+
+    font-weight:900;
+
+    color:#FFFFFF;
+
+    letter-spacing:1px;
+
+}
+.mr-weekly-card .mr-card-body{
+
+align-items:center;
+
+justify-content:center;
+
+}
+.mr-weekly-card .mr-card-footer{
+
+width:100%;
+
+}
+/*======================================================
+FITNESS STATUS
+======================================================*/
+
+.mr-fitness-status{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:10px;
+
+}
+
+.mr-status-item{
+
+    flex:1;
+
+    padding:8px 6px;
+
+    border-radius:10px;
+
+    text-align:center;
+
+    font-size:11px;
+
+    font-weight:700;
+
+    color:rgba(255,255,255,.55);
+
+    background:rgba(255,255,255,.04);
+
+    border:1px solid rgba(255,255,255,.05);
+
+    transition:.25s;
+
+}
+
+.mr-status-item.active{
+
+    color:#B7FF00;
+
+    background:rgba(157,255,0,.12);
+
+    border-color:rgba(157,255,0,.35);
+
+}
+.mr-week-label{
+
+    margin-top:4px;
+
+    text-align:center;
+
+    font-size:11px;
+
+    font-weight:700;
+
+    color:rgba(255,255,255,.65);
+
+    letter-spacing:2px;
+
+}
+.mr-fitness-score{
+    font-size:72px !important;
+    color:#9DFF00 !important;
+}
+
+.mr-fitness-level{
+    font-size:18px !important;
+    color:#FFF !important;
+}
+
+.mr-fitness-status{
+    display:grid !important;
+    grid-template-columns:repeat(2,1fr) !important;
+    gap:10px !important;
+}
+
+/* =======================================================
+   TODAY TRAINING CARD
+   Card somente leitura para o treino não-corrida do dia
+======================================================= */
+
+.mr-today-training-card{
+    min-height:320px;
+    background:
+        linear-gradient(180deg, rgba(15,20,25,.72), rgba(15,20,25,.94)),
+        radial-gradient(circle at 80% 20%, rgba(157,255,0,.10), transparent 42%);
+    border:1px solid rgba(157,255,0,.12);
+}
+
+.mr-today-training-card .mr-card-body{
+    justify-content:center;
+}
+
+.mr-today-training-icon{
+    font-size:28px;
+    background:rgba(157,255,0,.10);
+    border:1px solid rgba(157,255,0,.18);
+}
+
+.mr-today-training-type{
+    display:inline-flex;
+    align-self:flex-start;
+    padding:7px 11px;
+    border-radius:999px;
+    background:rgba(157,255,0,.08);
+    border:1px solid rgba(157,255,0,.16);
+    color:rgba(255,255,255,.62);
+    font-size:10px;
+    font-weight:800;
+    letter-spacing:1.6px;
+}
+
+.mr-today-training-card:hover{
+    transform:translateY(-2px);
+}
+/* ==========================================================
+   MISSÃO RIO — PADRÃO VISUAL DOS CARDS
+   ETAPA 01 — DIMENSÕES
+========================================================== */
+
+.mr-dashboard-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+    align-items: stretch;
+}
+
+/* Todos os cards do Dashboard possuem exatamente
+   a mesma dimensão */
+
+.mr-dashboard-grid > .mr-v3-card {
+    width: 100%;
+    height: 320px;
+    min-height: 320px;
+    max-height: 320px;
+    box-sizing: border-box;
+}
+
+/* Remove a altura especial antiga do card de corrida */
+
+.mr-dashboard-grid > .mr-workout-card {
+    height: 320px;
+    min-height: 320px;
+    max-height: 320px;
+}
+
+/* Card de treino de hoje */
+
+.mr-dashboard-grid > .mr-today-training-card {
+    height: 320px;
+    min-height: 320px;
+    max-height: 320px;
+}
+/* ==========================================================
+   ESTRUTURA INTERNA PADRONIZADA
+========================================================== */
+
+.mr-dashboard-grid > .mr-v3-card {
+    padding: 22px;
+    border-radius: 24px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    overflow: hidden;
+}
+
+/* Cabeçalho de todos os cards */
+
+.mr-dashboard-grid .mr-card-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 16px;
+}
+
+/* Ícones */
+
+.mr-dashboard-grid .mr-v3-card-icon,
+.mr-dashboard-grid .mr-card-icon {
+
+    width: 50px;
+    height: 50px;
+
+    flex: 0 0 50px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 15px;
+
+    font-size: 24px;
+}
+
+/* Títulos pequenos */
+
+.mr-dashboard-grid .mr-v3-card-title small,
+.mr-dashboard-grid .mr-card-heading small {
+
+    font-size: 11px;
+    line-height: 1.2;
+
+    letter-spacing: 1.8px;
+
+    font-weight: 800;
+
+    text-transform: uppercase;
+
+    color: rgba(255,255,255,.58);
+}
+
+/* Títulos principais */
+
+.mr-dashboard-grid .mr-v3-card-title strong,
+.mr-dashboard-grid .mr-card-heading h3 {
+
+    margin: 3px 0 0;
+
+    font-size: 16px;
+    line-height: 1.2;
+
+    font-weight: 800;
+
+    color: #FFFFFF;
+
+    word-break: break-word;
+}
+/* ==========================================================
+   NÚMEROS — PADRÃO ESPORTIVO
+========================================================== */
+
+.mr-dashboard-grid .mr-week-score {
+
+    font-size: 52px;
+
+    line-height: .95;
+
+    font-weight: 900;
+
+    letter-spacing: -1.5px;
+
+    color: #FFFFFF;
+
+}
+
+.mr-dashboard-grid .mr-week-percent {
+
+    margin-top: 8px;
+
+    font-size: 18px;
+
+    line-height: 1;
+
+    font-weight: 800;
+
+    letter-spacing: .5px;
+
+    color: #FFFFFF;
+
+}
+
+.mr-dashboard-grid .mr-card-metrics strong,
+.mr-dashboard-grid .mr-v3-metrics strong {
+
+    font-size: 17px;
+
+    line-height: 1.1;
+
+    font-weight: 800;
+
+    letter-spacing: -.3px;
+
+    color: #FFFFFF;
+}
+
+.mr-dashboard-grid .mr-card-metrics span,
+.mr-dashboard-grid .mr-v3-metrics span {
+
+    display: block;
+
+    margin-bottom: 5px;
+
+    font-size: 9px;
+
+    line-height: 1.2;
+
+    font-weight: 700;
+
+    letter-spacing: 1.2px;
+
+    text-transform: uppercase;
+
+    color: rgba(255,255,255,.48);
+}
+/* ==========================================================
+   RESPONSIVIDADE
+========================================================== */
+
+@media (max-width: 390px) {
+
+    .mr-dashboard-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+    .mr-dashboard-grid > .mr-v3-card {
+
+        height: 300px;
+        min-height: 300px;
+        max-height: 300px;
+
+    }
+
+}
+/* =========================================================
+   MAZZUPRO — PADRÃO VISUAL DOS CARDS DO DASHBOARD
+   ETAPA 1 — TAMANHO
+   ========================================================= */
+
+.mr-dashboard-grid .mr-card {
+    align-self: stretch;
+}
+.mr-dashboard-grid .mr-card {
+    padding: 20px;
+}
+.mr-dashboard-grid .mr-card {
+    overflow: hidden;
+}
+/* ============================================================
+   MAZZUPRO — PADRÃO FINAL DOS CARDS DO DASHBOARD
+   ============================================================ */
+
+/* GRID PRINCIPAL */
+.mr-dashboard-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+    align-items: stretch;
+}
+
+/* TODOS OS CARDS */
+.mr-dashboard-grid > * {
+    width: 100%;
+    min-width: 0;
+    height: 320px;
+    min-height: 320px;
+    max-height: 320px;
+    box-sizing: border-box;
+    align-self: stretch;
+}
+
+/* CASO OS CARDS TENHAM CLASSES ESPECÍFICAS */
+.mr-dashboard-grid .mr-v3-card,
+.mr-dashboard-grid .mr-workout-card,
+.mr-dashboard-grid .mr-today-training-card,
+.mr-dashboard-grid .mr-card {
+    width: 100%;
+    height: 320px;
+    min-height: 320px;
+    max-height: 320px;
+    box-sizing: border-box;
+    margin: 0;
+}
+
+/* CONTEÚDO INTERNO */
+.mr-dashboard-grid .mr-v3-card,
+.mr-dashboard-grid .mr-workout-card,
+.mr-dashboard-grid .mr-today-training-card,
+.mr-dashboard-grid .mr-card {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+/* ÍCONES */
+.mr-dashboard-grid .mr-card-icon,
+.mr-dashboard-grid .mr-v3-card-icon {
+    flex: 0 0 50px;
+    width: 50px;
+    height: 50px;
+}
+
+/* CABEÇALHO */
+.mr-dashboard-grid .mr-card-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 16px;
+}
+
+/* TÍTULO PEQUENO */
+.mr-dashboard-grid .mr-card-title.small,
+.mr-dashboard-grid .mr-v3-card-title.small {
+    font-size: 10px;
+    line-height: 1.2;
+    letter-spacing: 1.8px;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+/* TÍTULO PRINCIPAL */
+.mr-dashboard-grid .mr-card-title.strong,
+.mr-dashboard-grid .mr-v3-card-title.strong {
+    font-size: 16px;
+    line-height: 1.2;
+    font-weight: 800;
+}
+
+/* ============================================================
+   RESPONSIVIDADE
+   ============================================================ */
+
+@media (max-width: 390px) {
+
+    .mr-dashboard-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .mr-dashboard-grid > *,
+    .mr-dashboard-grid .mr-v3-card,
+    .mr-dashboard-grid .mr-workout-card,
+    .mr-dashboard-grid .mr-today-training-card,
+    .mr-dashboard-grid .mr-card {
+        height: 300px;
+        min-height: 300px;
+        max-height: 300px;
+    }
+}
+/* ==========================================================
+   MISSÃO RIO — PADRÃO DEFINITIVO DOS CARDS DO DASHBOARD
+   ETAPA 01 — DIMENSÕES UNIFICADAS
+========================================================== */
+
+.mr-dashboard-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+    align-items: stretch;
+}
+
+/* ==========================================================
+   TODOS OS 4 CARDS
+========================================================== */
+
+.mr-dashboard-grid > * {
+    width: 100%;
+    height: 320px;
+    min-height: 320px;
+    max-height: 320px;
+    box-sizing: border-box;
+}
+
+/* Mantém os cards internos organizados */
+
+.mr-dashboard-grid > * {
+    overflow: hidden;
+}
+
+/* ==========================================================
+   ESTRUTURA INTERNA
+========================================================== */
+
+.mr-dashboard-grid > * {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* ==========================================================
+   CABEÇALHO
+========================================================== */
+
+.mr-dashboard-grid .mr-card-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 16px;
+}
+
+/* ==========================================================
+   ÍCONES
+========================================================== */
+
+.mr-dashboard-grid .mr-v3-card-icon,
+.mr-dashboard-grid .mr-card-icon {
+    width: 50px;
+    height: 50px;
+
+    min-width: 50px;
+    min-height: 50px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 15px;
+
+    font-size: 24px;
+}
+
+/* ==========================================================
+   TÍTULOS PEQUENOS
+========================================================== */
+
+.mr-dashboard-grid .mr-v3-card-title small,
+.mr-dashboard-grid .mr-card-heading small {
+    font-size: 11px;
+    line-height: 1.2;
+
+    letter-spacing: 1.8px;
+
+    font-weight: 800;
+
+    text-transform: uppercase;
+
+    color: rgba(255,255,255,.58);
+}
+
+/* ==========================================================
+   TÍTULOS PRINCIPAIS
+========================================================== */
+
+.mr-dashboard-grid .mr-v3-card-title strong,
+.mr-dashboard-grid .mr-card-heading h3 {
+    margin: 3px 0 0;
+
+    font-size: 16px;
+    line-height: 1.2;
+
+    font-weight: 800;
+
+    color: #FFFFFF;
+
+    word-break: break-word;
+}
+
+/* ==========================================================
+   NÚMEROS PRINCIPAIS
+========================================================== */
+
+.mr-dashboard-grid .mr-week-score {
+    font-size: 52px;
+    line-height: .95;
+
+    font-weight: 900;
+
+    letter-spacing: -1.5px;
+
+    color: #FFFFFF;
+}
+
+.mr-dashboard-grid .mr-week-percent {
+    margin-top: 8px;
+
+    font-size: 18px;
+    line-height: 1;
+
+    font-weight: 800;
+
+    letter-spacing: .5px;
+
+    color: #FFFFFF;
+}
+
+/* ==========================================================
+   MÉTRICAS
+========================================================== */
+
+.mr-dashboard-grid .mr-card-metrics strong,
+.mr-dashboard-grid .mr-v3-metrics strong {
+    font-size: 17px;
+
+    line-height: 1.1;
+
+    font-weight: 800;
+
+    letter-spacing: -.3px;
+
+    color: #FFFFFF;
+}
+
+.mr-dashboard-grid .mr-card-metrics span,
+.mr-dashboard-grid .mr-v3-metrics span {
+    display: block;
+
+    margin-bottom: 5px;
+
+    font-size: 9px;
+
+    line-height: 1.2;
+
+    font-weight: 700;
+
+    letter-spacing: 1.2px;
+
+    text-transform: uppercase;
+
+    color: rgba(255,255,255,.48);
+}
+
+/* ==========================================================
+   RESPONSIVIDADE
+========================================================== */
+
+@media (max-width: 390px) {
+
+    .mr-dashboard-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .mr-dashboard-grid > * {
+        height: 300px;
+        min-height: 300px;
+        max-height: 300px;
+    }
+
+}
+/* ==========================================================
+   MISSÃO RIO — TIPOGRAFIA DOS CARDS
+   ETAPA 02 — PADRÃO TIPOGRÁFICO
+========================================================== */
+
+/* ==========================================================
+   BASE DOS CARDS
+========================================================== */
+
+.mr-dashboard-grid > * {
+    font-family:
+        Inter,
+        "Segoe UI",
+        Roboto,
+        Helvetica,
+        Arial,
+        sans-serif;
+}
+
+/* ==========================================================
+   LABELS / TÍTULOS PEQUENOS
+========================================================== */
+
+.mr-dashboard-grid .mr-v3-card-title small,
+.mr-dashboard-grid .mr-card-heading small {
+    font-size: 11px;
+    line-height: 1.15;
+
+    font-weight: 800;
+
+    letter-spacing: 1.6px;
+
+    text-transform: uppercase;
+}
+
+/* ==========================================================
+   TÍTULO PRINCIPAL DO CARD
+========================================================== */
+
+.mr-dashboard-grid .mr-v3-card-title strong,
+.mr-dashboard-grid .mr-card-heading h3 {
+    margin: 3px 0 0;
+
+    font-size: 17px;
+    line-height: 1.15;
+
+    font-weight: 800;
+
+    letter-spacing: -.2px;
+
+    color: #FFFFFF;
+}
+
+/* ==========================================================
+   NÚMEROS GRANDES
+========================================================== */
+
+.mr-dashboard-grid .mr-week-score {
+    font-size: 52px;
+    line-height: .9;
+
+    font-weight: 900;
+
+    letter-spacing: -2px;
+
+    color: #FFFFFF;
+}
+
+/* ==========================================================
+   PERCENTUAL
+========================================================== */
+
+.mr-dashboard-grid .mr-week-percent {
+    font-size: 18px;
+    line-height: 1;
+
+    font-weight: 800;
+
+    letter-spacing: .2px;
+
+    color: #FFFFFF;
+}
+
+/* ==========================================================
+   LABELS DAS MÉTRICAS
+========================================================== */
+
+.mr-dashboard-grid .mr-card-metrics span,
+.mr-dashboard-grid .mr-v3-metrics span {
+    display: block;
+
+    margin-bottom: 5px;
+
+    font-size: 9px;
+    line-height: 1.1;
+
+    font-weight: 800;
+
+    letter-spacing: 1.15px;
+
+    text-transform: uppercase;
+
+    color: rgba(255,255,255,.50);
+}
+
+/* ==========================================================
+   VALORES DAS MÉTRICAS
+========================================================== */
+
+.mr-dashboard-grid .mr-card-metrics strong,
+.mr-dashboard-grid .mr-v3-metrics strong {
+    font-size: 17px;
+    line-height: 1.05;
+
+    font-weight: 800;
+
+    letter-spacing: -.35px;
+
+    color: #FFFFFF;
+}
+
+/* ==========================================================
+   DATAS / TEXTOS SECUNDÁRIOS
+========================================================== */
+
+.mr-dashboard-grid .mr-card-date,
+.mr-dashboard-grid .mr-v3-card-date {
+    font-size: 13px;
+
+    line-height: 1.2;
+
+    font-weight: 500;
+
+    letter-spacing: 0;
+
+    color: rgba(255,255,255,.72);
+}
+/* ==========================================================
+   ESPAÇO PARA O BOTTOM NAV
+========================================================== */
+
+#page {
+    padding-bottom: 90px;
+}
+/* ==========================================================
+   AJUSTE — TREINO DE HOJE
+========================================================== */
+
+.mr-today-training-card .mr-card-header {
+    align-items: flex-start;
+}
+
+.mr-today-training-card .mr-v3-card-title {
+    min-width: 0;
+    flex: 1;
+}
+
+.mr-today-training-card .mr-v3-card-title strong {
+    display: block;
+    font-size: 15px;
+    line-height: 1.08;
+    overflow-wrap: break-word;
+}
+
+.mr-today-training-card .mr-today-training-icon {
+    flex-shrink: 0;
+}
+/* ==========================================================
+   CORRIDA DE HOJE — VISUAL PREMIUM
+========================================================== */
+
+.mr-dashboard-grid > .mr-workout-card {
+    position: relative;
+    overflow: hidden;
+
+    height: 320px;
+    min-height: 320px;
+    max-height: 320px;
+
+    background:
+        linear-gradient(
+            180deg,
+            rgba(10, 14, 18, .45),
+            rgba(10, 14, 18, .92)
+        ),
+        url("../assets/images/dashboard/corrida-card.jpg");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.mr-dashboard-grid > .mr-workout-card::before {
+    content: "";
+
+    position: absolute;
+    inset: 0;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(157,255,0,.08),
+            transparent 45%
+        );
+
+    pointer-events: none;
+}
+
+.mr-dashboard-grid > .mr-workout-card > * {
+    position: relative;
+    z-index: 1;
+}
+/* ==========================================================
+   MISSÃO RIO — CARD CORRIDA DE HOJE
+   IMAGEM + OVERLAY PREMIUM
+========================================================== */
+
+.mr-dashboard-grid > .mr-card.mr-today-training-card {
+
+    position: relative;
+
+    overflow: hidden;
+
+    background:
+        linear-gradient(
+            180deg,
+           rgba(10, 14, 18, 0.32) 0%,
+rgba(10, 14, 18, 0.58) 45%,
+rgba(10, 14, 18, 0.95) 100%
+        ),
+        url("../assets/images/dashboard/corrida-card.jpg");
+
+    background-size: cover;
+    background-position: 58% center;
+
+    border: 1px solid rgba(157, 255, 0, 0.22);
+
+    box-shadow:
+        0 18px 40px rgba(0, 0, 0, 0.38),
+        inset 0 0 40px rgba(0, 0, 0, 0.30);
+
+    transition: transform 0.25s ease,
+                border-color 0.25s ease,
+                box-shadow 0.25s ease;
+}
+
+
+/* ==========================================================
+   ESCURECIMENTO EXTRA
+========================================================== */
+
+.mr-dashboard-grid > .mr-card.mr-today-training-card::before {
+
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(157, 255, 0, 0.05),
+            transparent 45%
+        );
+
+    pointer-events: none;
+
+    z-index: 0;
+}
+
+
+/* ==========================================================
+   CONTEÚDO DO CARD ACIMA DA IMAGEM
+========================================================== */
+
+.mr-dashboard-grid > .mr-card.mr-today-training-card > * {
+
+    position: relative;
+
+    z-index: 1;
+
+}
+
+
+/* ==========================================================
+   HOVER
+========================================================== */
+
+.mr-dashboard-grid > .mr-card.mr-today-training-card:hover {
+
+    transform: translateY(-2px);
+
+    border-color: rgba(157, 255, 0, 0.42);
+
+    box-shadow:
+        0 22px 48px rgba(0, 0, 0, 0.45),
+        0 0 24px rgba(157, 255, 0, 0.08),
+        inset 0 0 40px rgba(0, 0, 0, 0.30);
+
+}
+/* ==========================================================
+   MISSÃO RIO — OBJETIVO DA SEMANA
+========================================================== */
+
+.mr-dashboard-grid > .mr-v3-card:nth-child(2){
+
+    position:relative;
+    overflow:hidden;
+
+    background:
+        linear-gradient(
+            180deg,
+            rgba(10,14,18,.45),
+            rgba(10,14,18,.88)
+        ),
+        url("../assets/images/dashboard/fitness-bg.jpg");
+
+    background-size:cover;
+    background-position:center;
+
+    border:1px solid rgba(157,255,0,.20);
+
+}
+/* ==========================================================
+   MISSÃO RIO — ÚLTIMO TREINO
+========================================================== */
+
+.mr-dashboard-grid > .mr-v3-card:nth-child(3){
+
+    position:relative;
+    overflow:hidden;
+
+    background:
+        linear-gradient(
+            180deg,
+            rgba(10,14,18,.25),
+            rgba(10,14,18,.82)
+        ),
+        url("../assets/images/dashboard/lastworkout-bg.jpg");
+
+    background-size:cover;
+    background-position:center;
+
+    border:1px solid rgba(255,255,255,.12);
+
+}
+/* ==========================================================
+   MISSÃO RIO — TREINO DE HOJE
+========================================================== */
+
+.mr-dashboard-grid > .mr-v3-card:nth-child(4){
+
+    position:relative;
+    overflow:hidden;
+
+    background:
+        linear-gradient(
+            180deg,
+            rgba(10,14,18,.38),
+            rgba(10,14,18,.88)
+        ),
+        url("../assets/images/dashboard/workout-bg.jpg");
+
+    background-size:cover;
+    background-position:center;
+
+    border:1px solid rgba(157,255,0,.20);
+
+}
+/* ==========================================================
+   HEADER — MISSÃO RIO
+========================================================== */
+
+.mr-header-missao {
+    color: #fff200;
+
+    -webkit-text-stroke: 1px #ff7800;
+
+    text-shadow:
+        0 0 2px #ff7800,
+        0 0 6px rgba(255, 120, 0, .95),
+        0 0 12px rgba(255, 140, 0, .70),
+        0 0 22px rgba(255, 180, 0, .35);
+
+    font-weight: 900;
+}
+/* ==========================================================
+   HEADER — MISSÃO RIO
+========================================================== */
+
+.mr-header-title {
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+    white-space: nowrap;
+    gap: 6px;
+}
+
+.mr-header-missao {
+    display: inline;
+    white-space: nowrap;
+
+    color: #fff200;
+
+    -webkit-text-stroke: 1px #ff7800;
+
+    text-shadow:
+        0 0 2px #ff7800,
+        0 0 6px rgba(255, 120, 0, .95),
+        0 0 12px rgba(255, 140, 0, .70),
+        0 0 18px rgba(255, 180, 0, .30);
+
+    font-weight: 900;
+}
+/* =========================================================
+   ÍCONE — ÚLTIMO TREINO
+   ========================================================= */
+
+.mr-last-card .mr-card-icon {
+    width: 50px;
+    height: 50px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 14px;
+
+    background:
+        radial-gradient(
+            circle at 50% 45%,
+            rgba(157, 255, 0, 0.22),
+            rgba(157, 255, 0, 0.06) 55%,
+            rgba(0, 0, 0, 0.18) 100%
+        );
+
+    border: 1px solid rgba(157, 255, 0, 0.55);
+
+    backdrop-filter: blur(10px);
+
+    box-shadow:
+        0 0 8px rgba(157, 255, 0, 0.30),
+        0 0 18px rgba(157, 255, 0, 0.16),
+        inset 0 0 14px rgba(157, 255, 0, 0.12);
+
+    position: relative;
+    overflow: hidden;
+}
+
+.mr-last-card .mr-card-icon svg {
+    width: 24px;
+    height: 24px;
+
+    stroke: #9dff00;
+    stroke-width: 2.4;
+
+    filter:
+        drop-shadow(0 0 3px rgba(157, 255, 0, 0.95))
+        drop-shadow(0 0 7px rgba(157, 255, 0, 0.55));
+}
+
+.mr-last-card .mr-card-icon::before {
+    content: "";
+
+    position: absolute;
+
+    width: 70%;
+    height: 70%;
+
+    top: -35%;
+    left: -35%;
+
+    background: rgba(255, 255, 255, 0.10);
+
+    transform: rotate(35deg);
+
+    filter: blur(8px);
+
+    pointer-events: none;
+}
+/* =========================================================
+   ÍCONE — CORRIDA
+   ========================================================= */
+
+.mr-workout-card .mr-v3-card-icon svg {
+    width: 25px;
+    height: 25px;
+
+    stroke: #9dff00;
+    stroke-width: 2.8;
+
+    filter:
+        drop-shadow(0 0 3px rgba(157, 255, 0, 0.95))
+        drop-shadow(0 0 8px rgba(157, 255, 0, 0.55));
+}
+.mr-header-btn {
+    width: 44px;
+    height: 44px;
+}
+
+.mr-header-btn img {
+    width: 38px;
+    height: 38px;
+    object-fit: contain;
+    display: block;
+    border-radius: 10px;
+}
+.mr-logo {
+    width: 46px;
+    height: 46px;
+
+    flex: 0 0 46px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 14px;
+
+    overflow: hidden;
+
+    padding: 0;
+}
+.mr-logo img {
+    width: 36px;
+    height: 36px;
+
+    object-fit: contain;
+
+    display: block;
+}
+/* ==========================================================
+   HEADER — LOGOS PERSONALIZADOS
+========================================================== */
+
+/* LOGO M */
+
+.mr-logo {
+    width: 52px;
+    height: 52px;
+
+    flex: 0 0 52px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 0;
+
+    background: transparent !important;
+    border: none;
+    box-shadow: none;
+
+    border-radius: 14px;
+
+    overflow: visible;
+}
+
+.mr-logo img {
+    width: 48px;
+    height: 48px;
+
+    object-fit: contain;
+    display: block;
+
+    background: transparent;
+
+    border: none;
+}
+
+
+/* TROFÉU */
+
+.mr-header-btn {
+    width: 50px;
+    height: 50px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 0;
+}
+
+.mr-header-btn img {
+    width: 48px;
+    height: 48px;
+
+    object-fit: contain;
+    display: block;
+
+    border-radius: 10px;
+}
+/* ==========================================================
+   HEADER — BLOCO CENTRAL
+========================================================== */
+
+.mr-header-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    flex: 1;
+    min-width: 0;
+
+    gap: 4px;
+
+    text-align: center;
+}
+.mr-header-center {
+    display: flex;
+    align-items: center;
+
+    flex: 1;
+    min-width: 0;
+}

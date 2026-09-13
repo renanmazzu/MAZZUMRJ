@@ -1,0 +1,200 @@
+/* ==========================================================
+   DASHBOARD
+========================================================== */
+
+.mr-dashboard{
+
+    width:100%;
+
+    margin:0;
+
+    padding:18px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:18px;
+
+}
+
+.mr-dashboard-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,minmax(0,1fr));
+
+    gap:16px;
+
+    align-items:stretch;
+
+}
+
+.mr-dashboard-grid>*{
+
+    width:100%;
+
+    min-width:0;
+
+}
+
+.mr-dashboard > .mr-card-featured{
+
+    margin-top:18px;
+
+}
+
+
+/* ==========================================================
+   FEATURED CARD
+========================================================== */
+/* ==========================================================
+   FEATURED CARD
+========================================================== */
+
+.mr-card-highlight{
+
+    position:relative;
+
+    overflow:hidden;
+
+
+    min-height:160px;
+
+    border-radius:26px;
+
+    border:1px solid rgba(255,140,0,.35);
+
+    background:
+
+        radial-gradient(
+            circle at top right,
+            rgba(255,120,0,.14),
+            transparent 42%
+        ),
+
+        radial-gradient(
+            circle at bottom left,
+            rgba(158,240,26,.08),
+            transparent 45%
+        ),
+
+        linear-gradient(
+            180deg,
+            #18212C,
+            #10161D
+        );
+
+    box-shadow:
+
+        0 20px 45px rgba(0,0,0,.35),
+
+        0 0 30px rgba(255,120,0,.10);
+
+}
+
+.mr-card-highlight::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+
+        linear-gradient(
+            135deg,
+            rgba(255,255,255,.03),
+            transparent
+        );
+
+    pointer-events:none;
+
+}
+
+/* ==========================================================
+   TAGS
+========================================================== */
+
+.mr-card-tag{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    padding:10px 18px;
+
+    border-radius:999px;
+
+    font-size:.78rem;
+
+    font-weight:700;
+
+    letter-spacing:1px;
+
+    background:rgba(158,240,26,.10);
+
+    color:#9EF01A;
+
+}
+
+.mr-card-tag.blue{
+
+    color:#55B8FF;
+
+    background:rgba(85,184,255,.12);
+
+}
+
+.mr-card-tag.purple{
+
+    color:#C08DFF;
+
+    background:rgba(192,141,255,.12);
+
+}
+
+.mr-card-tag.orange{
+
+    color:#FFB347;
+
+    background:rgba(255,179,71,.12);
+
+}
+
+/* ==========================================================
+   RESPONSIVO
+========================================================== */
+
+@media(max-width:760px){
+
+    .mr-dashboard-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .mr-card-highlight{
+
+        grid-column:span 1;
+
+    }
+
+}
+
+
+.mr-dashboard-grid{
+
+display:grid;
+
+grid-template-columns:1fr 1fr;
+
+gap:16px;
+
+}
+
+@media(max-width:480px){
+}
